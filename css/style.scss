@@ -1,0 +1,401 @@
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    @media (max-width: 575.98px) {
+        font-size: 12px;
+    }
+    @media (min-width: 576px) and (max-width: 991.98px) {
+        font-size: 16px;
+    }
+    @media (min-width: 992px) and (max-width: 1299.98px) {
+        font-size: 12px;
+    }
+    @media (min-width: 1300px) and (max-width: 1531.98px){
+        font-size: 15px;
+    }
+    @media (min-width: 1532px) and (max-width: 1698.99px) {
+        font-size: 14px;
+    }
+    @media (min-width: 2500px) {
+        font-size: 20px;
+    }
+    @media (max-width: 320px) {
+        font-size: 9px;
+    }
+    @media (min-width: 321px) and (max-width: 376px) {
+        font-size: 10px;
+    }  
+}
+
+body {
+    font-family: $font2;
+    font-weight: 400;
+    background: $blue;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.3s ease-in-out;
+	scrollbar-color: $white;
+	scrollbar-width: thin
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+	height: 2px
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 2px;
+	background: $red;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $white;
+	border-radius: 2px;
+	margin: 0
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $white;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+
+a{
+	margin:0;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+a, select , input , textarea , button{
+	outline: none !important;
+    text-decoration: none;
+}
+
+.btn:focus, .btn.focus, .form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-link:focus, .btn-link.focus {
+    text-decoration: none;
+}
+
+main{
+    position: relative;
+    &::before{
+        content: url('../img/spiral.png');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+        opacity: 0.9;
+        z-index: -1;
+    }
+}
+
+// .container {
+//     display: block;
+//     width: 90%;
+//     max-width: 100%;
+//     padding: 0 4rem;
+//     margin: 0 auto;
+//     @media (max-width: 575.98px) {
+//         padding: 0 2rem;
+//     }
+// }
+
+.container {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        max-width: 720px;
+    }
+    @media (min-width: 1200px) and (max-width: 1299.98px) {
+        max-width: 960px;
+    }
+    @media (min-width: 1300px) and (max-width: 1599.98px){
+        max-width: 80rem;
+    }
+    @media (min-width: 1600px) and (max-width: 2499.99px) {
+        max-width: 95rem;
+    }
+    @media (min-width: 2500px) {
+        max-width: 90rem;
+    }
+}
+
+.main__btn{
+    @include flexCenter;
+    @include fontMaker($font1, 1rem, 700, normal);
+    background-color: $yellow;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    padding: 0.3rem 1.5625rem;
+    min-height: 2.5rem;
+    transition: background-color .3s ease,box-shadow .3s ease;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-shadow: none;
+    border-radius: 1.875rem;
+    border: none;
+    margin: 0;
+}
+
+.header{
+    transition: all 0.5s ease 0s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    &__content{
+        #brand{
+            width: 10.375rem;
+            height: auto;
+        }
+        ul{
+            @include flexBetween;
+            li{
+                margin-right: 0.5rem;
+                a{
+                    color: $white;
+                    @include fontMaker($font1, 1.125rem, 400, normal);
+                    .telegram{
+                        width: 1.65rem;
+                        height: auto;
+                    }
+                    .twitter{
+                        width: 1.75rem;
+                        height: auto;
+                    }
+                    .medium{
+                        width: 2rem;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sticky {
+    @media (min-width: 992px) {   
+        #brand{
+            width: 8rem;
+        }
+        ul{
+            li{
+                a{
+                    @include fontMaker($font1, 1rem, 400, normal);
+                    .telegram{
+                        width: 1rem;
+                    }
+                    .twitter{
+                        width: 1.05rem;
+                    }
+                    .medium{
+                        width: 1.35rem;
+                    }
+                }
+            }
+        }
+        .socials{
+            margin-left: 2rem;
+            &__link{
+                margin-left: 1.5rem;
+            } 
+        }
+    }
+}
+
+.homeHero{
+    padding: 8.5rem 0;
+    // padding-bottom: 10rem;
+    position: relative;
+    &__content{
+        @include flexBetween;
+        &__left{
+            padding-right: 2rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            h1{
+                @include fontMaker($font1, 3.3125rem, 300, normal);
+                margin: 1.5rem 0;
+                @media (max-width: 575.98px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 576px) and (max-width: 991.98px) {
+                    font-size: 2.5rem;
+                }
+                .yellow{
+                    color: yellow;
+                }
+                .pink{
+                    color: pink;
+                }
+            }
+            p{
+                @include fontMaker($font2, 1.5rem, 400, 2rem);
+                margin: 1rem 0 2.5rem;
+            }
+        }
+        &__right{
+
+        }
+    }
+    .shape{
+        position: absolute;
+        bottom: -11rem;
+        width: 100%;
+    }
+}
+
+.footer{
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0 12rem 0;
+    @media (max-width: 991.98px) {
+        padding-bottom: 7rem;
+    }
+    &__links{
+        padding: 2rem 0;
+        ul{
+            @include flexCenter;
+            li{
+                margin: 0 0.5rem;
+                a{
+                    font-size: 0.75rem;
+                    color: $white;
+                }
+            }
+        }
+        &__top{
+            margin-bottom: 0.5rem;
+            li{
+                a{
+                    font-weight: 600;
+                }
+            }
+        }
+        &__below{
+            flex-wrap: wrap;
+            li{
+                margin: 1rem 1rem 0.25rem 1rem !important;
+                @media (max-width: 575.98px) {
+                    margin: 0.5rem 0.5rem 0.25rem 0.5rem !important;
+                }
+                a{
+                    font-weight: 400;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    &__payments{
+        padding: 2rem 0;
+        text-align: center;
+        p{
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: $blue;
+            padding-bottom: 2rem;
+        }
+        .show{
+            font-size: 0.625rem;
+            color: $blue;
+            justify-content: center !important;
+        }
+        ul{
+            @include flexCenter;
+            margin: 0 auto;
+            li{
+                margin: 0 1rem;
+                a{
+                    font-size: 0.75rem;
+                    color: $white;
+                }
+            }
+        }
+        &__top{
+            &__row{
+                margin-bottom: 0.75rem;
+                .secure{
+                    margin: 0 1rem;
+                    li{
+                        img{
+                            width: 5.0681rem;
+                            height: 2.3462rem;
+                            @media (max-width: 575.98px) {
+                                width: 4rem;
+                            }
+                        }
+                    }
+                }
+                .best{
+                    width: 95%;
+                    flex-wrap: wrap;
+                    @media (max-width: 575.98px) {
+                        width: 100%;
+                    }
+                    li{
+                        img{
+                            width:7.1787rem;
+                            height: auto;
+                            @media (max-width: 575.98px) {
+                                width: 5.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__content{
+        text-align: center;
+        color: #656D7D;
+        padding-top: 2rem;
+        img{
+            width: 3.75rem;
+            height: auto;
+        }
+        h5{
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+        }
+        p{
+            font-size: 0.875rem;
+            line-height: 1.5;
+            span{
+                color: $blue;
+                @media (max-width: 991.98px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

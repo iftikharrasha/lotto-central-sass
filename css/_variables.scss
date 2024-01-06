@@ -1,0 +1,39 @@
+$linear-one: linear-gradient(328.34deg, #FF1158 18.15%, #FD4B80 67.02%);
+$linear-two: linear-gradient(291.65deg, #FF5C00 20.28%, #FF9458 72.21%);
+$linear-two: linear-gradient(285.84deg, #FF0000 16.26%, #FF4444 81.31%);;
+$linear-two: linear-gradient(279.27deg, #FF3100 19.49%, rgba(255, 94, 55, 0.88) 80.61%);
+$white: #FFFFFF;
+$offwhite: #FFF2EA;
+$blue: #0E0C31;
+$yellow: #FBD852;
+$red: #FF5C00;
+$gray: #4D4D4D;
+$black: #131313;
+
+$font1: 'Comfortaa', sans-serif;
+$font2: 'Barlow', sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin bgCover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin fontMaker($family, $size, $weight, $lineHeight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}

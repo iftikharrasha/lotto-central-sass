@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+        <title>Lotto Central</title>
+
+        <!-- Default SEO Meta -->
+        <meta name="description" content="Lorem ipsum site your description">
+        <meta name="keywords" content="The Lucky Rat, Website">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./css/aos.css"/>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <main id="main" class="main">
+          <header class="header" id="header">
+            <div class="header__content">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <img id="brand" src="./img/lotto-central.png" class="img-fluid" alt="logo" width="166px" height="89px">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <img src="img/toggler-icon.svg" alt="toggler">
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-lg-auto mb-0">
+                                <li class="nav-item ml-lg-4">
+                                    <a class="nav-link" href="#about">Home</a>
+                                </li>
+                                <li class="nav-item ml-lg-4">
+                                    <a class="nav-link" href="#ecosytem">Lottery</a>
+                                </li>
+                                <li class="nav-item ml-lg-4">
+                                    <a class="nav-link" href="#tokenomices">About</a>
+                                </li>
+                                <li class="nav-item ml-lg-4">
+                                    <a class="nav-link" href="#roadmap">FAQ</a>
+                                </li>
+                                <li class="nav-item ml-lg-4">
+                                  <button class="main__btn">SIGN UP</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+              </div>
+          </header>
+
+          <section class="homeHero">
+            <div class="container">
+              <div class="homeHero__content">
+                <div class="homeHero__content__left">
+                  <h1>Play <span class="yellow">Australian</span> <br> <span class="yellow">Jackpots</span> from <span class="pink">India</span></h1>
+                  <p>Lotto centrals  makes daily live easier and that in a safe way, by eliminating the till in all situations, on- and offline. Lotto central contextual services enable seamless customer journeys, including frictionless payments.</p>
+                  <button class="main__btn">SIGN UP</button>
+                </div>
+                <div class="homeHero__content__right">
+                  <img src="./img/coins.png" alt="coins" width="546px" height="401px">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+              <div class="container">
+                <div class="footer__links">
+                  <ul class="footer__links__top">
+                    <li>
+                      <a href="#about">Home</a>
+                    </li>
+                    <li>
+                        <a href="#ecosytem">Lottery</a>
+                    </li>
+                    <li>
+                        <a href="#tokenomices">About</a>
+                    </li>
+                    <li>
+                        <a href="#roadmap">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#lottery" target="_blank" rel="noreferrer">SIGN UP</a>
+                    </li>
+                  </ul>
+                  <ul class="footer__links__below">
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Bonus Terms and Conditions</a></li>
+                  </ul>
+                </div>
+              </div>
+          </footer> 
+        </main>
+
+        <script src="./js/jquery-3.5.1.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/jquery.gotop.js"></script>
+        <script src="./js/jquery.waypoints.min.js"></script>
+        <script src="./js/aos.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
+
+        <script>
+          /********* sticky header ********/
+          $(window).scroll(function () {
+              if ($(window).scrollTop() > 10) {
+                  $("header").addClass("sticky");
+              } else {
+                  $("header").removeClass("sticky");
+              }
+          });
+          // const navbar = document.getElementById('floating');
+
+          // const onScroll = () => {
+          //   const scroll = document.documentElement.scrollTop
+
+          //   if (scroll > 10) {
+          //       navbar.classList.add("scrolled");
+          //   } else {
+          //       navbar.classList.remove("scrolled")
+          //   }
+          // }
+
+          /********* scroll event ********/
+          // window.addEventListener('scroll', onScroll)
+
+          // Custom function to build the slider 
+          // const buildSwiperSlider = sliderElm => {
+          //     const sliderIdentifier = sliderElm.dataset.id;
+
+          //     return new Swiper(`#${sliderElm.id}`, {
+          //         navigation: {
+          //             nextEl: `.swiper-next-${sliderIdentifier}`,
+          //             prevEl: `.swiper-prev-${sliderIdentifier}`
+          //         },
+          //         slidesPerView: "auto",
+          //         spaceBetween: 30,
+                  
+          //         breakpoints: {
+          //             320: {
+          //                 slidesPerView: "auto",
+          //                 spaceBetween: 20,
+          //             },
+          //             640: {
+          //                 slidesPerView: "auto",
+          //             },
+          //             992: {
+          //                 slidesPerView: "auto",
+          //             },
+          //             1600: {
+          //                 slidesPerView: "auto",
+          //             }
+          //         },
+          //     });
+          // }
+
+          // Get all of the swipers on the page
+          // const allSliders = document.querySelectorAll('.gallerySlider');
+
+          // Loop over all of the fetched sliders and apply Swiper on each one.
+          // allSliders.forEach(slider => buildSwiperSlider(slider));
+
+          /********* mobile navigation ********/
+          // const toggleBars = () => {
+          //   const bars = document.getElementById("toggler-bars");
+          //   const heading = document.getElementById("headingOne");
+
+          //   bars.classList.toggle('active');
+          //   header.classList.toggle('nav-open');
+          // }
+        </script>
+    </body>
+
+</html>
