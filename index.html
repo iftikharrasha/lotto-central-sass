@@ -75,6 +75,39 @@
             </div>
           </section>
 
+          <section class="features">
+            <div class="container">
+                <div class="features__intro">
+                  <h2 data-aos="fade" data-aos-delay="500" data-aos-duration="1000">India’s ticket to Australia’s largest official lotteries online</h2>
+                </div>
+                <div class="features__contents">
+                    <div class="item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <img src="./img/access.png" alt="access"/>
+                        <h2>Seamless Access</h2>
+                        <p>Enter Australian lotteries for unparalleled winning opportunities</p>
+                    </div>
+
+                    <div class="item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <img src="./img/secure.png" alt="secure"/>
+                        <h2>Secure Transactions</h2>
+                        <p>Protected payments ensure safe participation and financial security.</p>
+                    </div>
+
+                    <div class="item" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                        <img src="./img/wins.png" alt="wins"/>
+                        <h2>Guaranteed Wins</h2>
+                        <p>Exclusive entry increases odds, enhancing your chances of winning.</p>
+                    </div>
+
+                    <div class="item" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+                        <img src="./img/tailored.png" alt="tailored"/>
+                        <h2>Tailored Experience</h2>
+                        <p>User-centric design for seamless and enjoyable participation from India.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
           <section class="about" id="about">
             <div class="container">
                 <div class="about__contents">
@@ -154,6 +187,54 @@
             </div>
           </section>
 
+          <section class="faq" id="faq">
+            <div class="container">
+              <div class="faq__intro">
+                <h2 data-aos="fade" data-aos-delay="500" data-aos-duration="1000">Frequently asked questions</h2>
+              </div>
+              <div class="faq__accordions" data-aos="fade" data-aos-delay="400" data-aos-duration="1000">
+                <ul>
+                  <li class="accordions__item">
+                    <button class="accordions__control" aria-expanded="false">
+                      <span class="accordions__title">How Does Lotto Central Simplify Gaming Transactions?</span>
+                      <span class="accordions__icon"></span>
+                    </button>
+                    <div class="accordions__text" aria-hidden="true">
+                      <p>Lotto Central revolutionizes the gaming experience by eliminating physical tills both online and offline. Our contextual services ensure seamless customer journeys, enabling frictionless payments, making your gaming interactions hassle-free.</p>
+                    </div>
+                  </li>
+                  <li class="accordions__item">
+                    <button class="accordions__control" aria-expanded="false">
+                      <span class="accordions__title">What Measures Does Lotto Central Take to Ensure Responsible Gaming?</span>
+                      <span class="accordions__icon"></span>
+                    </button>
+                    <div class="accordions__text" aria-hidden="true">
+                      <p>At Lotto Central, responsible gaming is a priority. We value user feedback and are dedicated to enhancing safety features continually. Our platform is designed to prioritize the well-being of our users while maintaining the excitement of lottery gaming.</p>
+                    </div>
+                  </li>
+                  <li class="accordions__item">
+                      <button class="accordions__control" aria-expanded="false">
+                          <span class="accordions__title">What Makes Lotto Central Different for Indian Users?</span>
+                          <span class="accordions__icon"></span>
+                      </button>
+                      <div class="accordions__text" aria-hidden="true">
+                        <p>Lotto Central provides an exclusive and secure platform tailored for Indian users. With us, you can effortlessly purchase tickets for Australia's most thrilling lotteries. Our mission is simple: to make life-changing jackpots easily accessible to you with just a few clicks.</p>  
+                      </div>
+                  </li>
+                  <li class="accordions__item">
+                      <button class="accordions__control" aria-expanded="false">
+                          <span class="accordions__title"> How Does Lotto Central Empower Users with Global Lottery Opportunities?</span>
+                          <span class="accordions__icon"></span>
+                      </button>
+                      <div class="accordions__text" aria-hidden="true">
+                        <p>Trust Lotto Central to be your gateway to the excitement, transparency, and vast possibilities of Australian lotteries. Join us on this exhilarating journey where every ticket purchased holds the potential to turn your dreams into reality.</p>  
+                      </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <footer class="footer">
               <div class="container">
                 <div class="footer__links">
@@ -221,6 +302,31 @@
                   $("header").removeClass("sticky");
               }
           });
+
+          /********* faq accordion ********/
+          document.addEventListener('DOMContentLoaded',() => {
+            const accordions = document.querySelectorAll('.accordions__item');
+
+            accordions.forEach(el => {
+              el.addEventListener('click', (e) =>{
+                  const self = e.currentTarget;
+                  const control = self.querySelector('.accordions__control');
+                  const content = self.querySelector('.accordions__text');
+
+                  self.classList.toggle('open');
+
+                  if(self.classList.contains('open')){
+                      control.setAttribute('aria-expanded', true);
+                      content.setAttribute('aria-hidden', false);
+                      content.style.maxHeight = content.scrollHeight + 'px';
+                  }else{
+                      control.setAttribute('aria-expanded', false);
+                      content.setAttribute('aria-hidden', true);
+                      content.style.maxHeight = null;
+                  }
+              });
+            });
+          })
           // const navbar = document.getElementById('floating');
 
           // const onScroll = () => {
