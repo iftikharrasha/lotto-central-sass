@@ -625,7 +625,7 @@ main{
                     }
                     P{
                         color: $white;
-                        @include fontMaker($font1, 1.125rem, 300, 1.75rem);
+                        @include fontMaker($font1, 1.125rem, 400, 1.75rem);
                         @media (max-width: 479.98px) {
                             font-size: 16px;
                         }
@@ -643,6 +643,130 @@ main{
             }
             .open .accordions__icon {
                 transform: rotate(225deg);
+            }
+        }
+    }
+}
+
+.contact{
+    padding: 10rem 0 0 0;
+    &__intro {
+        text-align: center;
+        margin-bottom: 3.75rem;
+        @media (max-width: 991.98px) {
+            margin-bottom: 32px;
+        }
+        h2 {
+            @include fontMaker($font1, 2.25rem, 300, 2rem);
+            position: relative;
+            text-transform: capitalize;
+            padding: 0 0.5rem 1rem 0.5rem;
+            text-align: center;
+            @media (max-width: 767.98px) {
+                font-size: 36px;
+            }
+        }
+        p{
+            @include fontMaker($font1, 1.125rem, 400, 2rem);
+        }
+    }
+    &__contents{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        padding: 4rem 1rem;
+        border-radius: 1.25rem;
+        @include flexCenter;
+        @media (max-width: 575.98px) {
+            width: 100%;
+            padding: 5rem 1.5rem;
+        }
+        @media (min-width: 576px) and (max-width: 1299.98px) {
+            width: 100%;
+            padding: 5rem;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background: linear-gradient(40deg, rgba(161, 198, 221, 0.5) 0%, rgba(161, 198, 221, 0.225) 100%);
+            filter: blur(1);
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 20px;
+        }
+        &__left{
+            h6{
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                padding-bottom: 1.5rem;
+            }
+            p{
+                @include fontMaker($font1, 1.125rem, 400, 2rem);
+                margin: 0 auto;
+                @media (max-width: 1299.98px) {
+                    width: 100%;
+                }
+            }
+            form{
+                padding: 2rem 0 1rem 0;
+                width: 92%;
+                .fields{
+                    @include flexCenter;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    input, textarea{
+                        width: 100%;
+                        font-family: $font1;
+                        font-size: 1.5rem;
+                        background-color: transparent;
+                        color: $white;
+                        padding: 0.85rem 1.5rem;
+                        margin-bottom: 1rem;
+                        border: 0.1rem solid $white;
+                        box-sizing: border-box;
+                        border-radius: 1rem;
+                        @media (max-width: 575.98px) {
+                            width: 100%;
+                        }
+                        @media (min-width: 576px) and (max-width: 1299.98px) {
+                            width: 80%;
+                        }
+                    }
+                    textarea{
+                        border-radius: 1.85rem;
+                        padding: 0.95rem 1.5rem;
+                    }
+                    ::placeholder {
+                        color: $white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &__right{
+            .thumb{
+                width: 36.9375rem;
+                height: auto;
+            }
+            ul{
+                padding-top: 1rem;
+                li{
+                    margin: 1rem 0;
+                    span{
+                        @include fontMaker($font1, 1rem, 400, 2rem);
+                    }
+                    img{
+                        width: 1.875rem;
+                        height: 1.875rem;
+                        margin-right: 0.45rem;
+                    }
+                }
             }
         }
     }

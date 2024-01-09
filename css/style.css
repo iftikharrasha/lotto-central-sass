@@ -958,7 +958,7 @@ main::before {
   color: #FFFFFF;
   font-family: "Comfortaa", sans-serif;
   font-size: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75rem;
 }
 
@@ -987,6 +987,214 @@ main::before {
 .faq__accordions ul .open .accordions__icon {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
+}
+
+.contact {
+  padding: 10rem 0 0 0;
+}
+
+.contact__intro {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+@media (max-width: 991.98px) {
+  .contact__intro {
+    margin-bottom: 32px;
+  }
+}
+
+.contact__intro h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+  position: relative;
+  text-transform: capitalize;
+  padding: 0 0.5rem 1rem 0.5rem;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .contact__intro h2 {
+    font-size: 36px;
+  }
+}
+
+.contact__intro p {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.contact__contents {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 4rem 1rem;
+  border-radius: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 575.98px) {
+  .contact__contents {
+    width: 100%;
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1299.98px) {
+  .contact__contents {
+    width: 100%;
+    padding: 5rem;
+  }
+}
+
+.contact__contents::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(40deg, rgba(161, 198, 221, 0.5) 0%, rgba(161, 198, 221, 0.225) 100%);
+  -webkit-filter: blur(1);
+          filter: blur(1);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+}
+
+.contact__contents__left h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 1.5rem;
+}
+
+.contact__contents__left p {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1299.98px) {
+  .contact__contents__left p {
+    width: 100%;
+  }
+}
+
+.contact__contents__left form {
+  padding: 2rem 0 1rem 0;
+  width: 92%;
+}
+
+.contact__contents__left form .fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__contents__left form .fields input, .contact__contents__left form .fields textarea {
+  width: 100%;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0.85rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .contact__contents__left form .fields input, .contact__contents__left form .fields textarea {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1299.98px) {
+  .contact__contents__left form .fields input, .contact__contents__left form .fields textarea {
+    width: 80%;
+  }
+}
+
+.contact__contents__left form .fields textarea {
+  border-radius: 1.85rem;
+  padding: 0.95rem 1.5rem;
+}
+
+.contact__contents__left form .fields ::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.contact__contents__left form .fields :-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.contact__contents__left form .fields ::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.contact__contents__left form .fields ::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.contact__contents__right .thumb {
+  width: 36.9375rem;
+  height: auto;
+}
+
+.contact__contents__right ul {
+  padding-top: 1rem;
+}
+
+.contact__contents__right ul li {
+  margin: 1rem 0;
+}
+
+.contact__contents__right ul li span {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.contact__contents__right ul li img {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 0.45rem;
 }
 
 .footer {
