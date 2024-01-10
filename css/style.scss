@@ -19,7 +19,7 @@ html {
         font-size: 12px;
     }
     @media (min-width: 1300px) and (max-width: 1531.98px){
-        font-size: 15px;
+        font-size: 14px;
     }
     @media (min-width: 1532px) and (max-width: 1698.99px) {
         font-size: 14px;
@@ -104,6 +104,7 @@ a, select , input , textarea , button{
 main{
     position: relative;
     &::before{
+        overflow: hidden;
         content: url('../img/spiral.png');
         position: absolute;
         width: 100%;
@@ -111,6 +112,7 @@ main{
         background: $blue;
         opacity: 0.9;
         z-index: -1;
+        @include bgCover;
     }
 }
 
@@ -126,21 +128,51 @@ main{
 // }
 
 .container {
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        max-width: 720px;
+    // @media (min-width: 576px) and (max-width: 767.98px) {
+    //     max-width: 720px;
+    // }
+    // @media (min-width: 1200px) and (max-width: 1299.98px) {
+    //     max-width: 60rem;
+    // }
+    // @media (min-width: 1300px) and (max-width: 1599.98px){
+    //     max-width: 90rem;
+    // }
+    // @media (min-width: 1600px) and (max-width: 2499.99px) {
+    //     max-width: 95rem;
+    // }
+    // @media (min-width: 2500px) {
+    //     max-width: 90rem;
+    // }
+    max-width: 100% !important;
+    padding: 0 13rem;
+    @media (max-width: 575.98px) {
+        padding-left: 2.25rem !important;
+        padding-right: 2.25rem !important;
     }
-    @media (min-width: 1200px) and (max-width: 1299.98px) {
-        max-width: 960px;
+    @media (min-width: 576px) and (max-width: 991.98px) {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
     }
-    @media (min-width: 1300px) and (max-width: 1599.98px){
-        max-width: 80rem;
+    @media (min-width: 992px) and (max-width: 1299.98px) { 
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
     }
-    @media (min-width: 1600px) and (max-width: 2499.99px) {
-        max-width: 95rem;
+    @media (min-width: 1300px) and (max-width: 1531.98px){ 
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+    @media (min-width: 1532px) and (max-width: 1698.99px) {
+        padding-left: 12rem !important;
+        padding-right: 12rem !important;
     }
     @media (min-width: 2500px) {
-        max-width: 90rem;
+        padding-left: 12rem !important;
+        padding-right: 12rem !important;
     }
+}
+
+.navbar{
+    padding: 1rem 0;
 }
 
 .yellow{
@@ -243,17 +275,18 @@ main{
 }
 
 .hero{
-    padding: 8.5rem 0;
-    // padding-bottom: 10rem;
+    padding: 10rem 0 8.5rem 0;
+    @media (max-width: 991.98px) {
+        padding-bottom: 4rem;
+    }
     position: relative;
     &__content{
         @include flexBetween;
+        @media (max-width: 991.98px) {
+            flex-direction: column;
+        }
         &__left{
             padding-right: 2rem;
-            img{
-                width: 100%;
-                height: auto;
-            }
             h1{
                 @include fontMaker($font1, 3.3125rem, 300, normal);
                 margin: 1.5rem 0;
@@ -263,6 +296,9 @@ main{
                 @media (min-width: 576px) and (max-width: 991.98px) {
                     font-size: 2.5rem;
                 }
+                @media (min-width: 992px) and (max-width: 1299.98px) {
+                    font-size: 2.5rem;
+                }
                 span{
                     font-weight: 400;
                 }
@@ -270,10 +306,17 @@ main{
             p{
                 @include fontMaker($font1, 1.25rem, 400, 2rem);
                 margin: 1rem 0 2.5rem;
+                @media (min-width: 992px) and (max-width: 1299.98px) {
+                    font-size: 1.125rem;
+                    line-height: 1.75rem;
+                }
             }
         }
         &__right{
-
+            img{
+                width: 34.125rem;
+                height: auto;
+            }
         }
     }
     .shape{
@@ -284,8 +327,11 @@ main{
 }
 
 .gallery {
-    padding: 4rem 0 6rem 13.5rem;
-    position: relative;
+    padding: 4rem 0 6rem 0;
+    position: relative; 
+    .container{
+        padding-right: 0 !important;
+    }
     &__text {
         @include flexCenter;
         justify-content: flex-start;
@@ -295,8 +341,8 @@ main{
             @include fontMaker($font1, 2.25rem, 300, 2rem);
             position: relative;
             padding-bottom: 1rem;
-            @media (max-width: 767.98px) {
-                font-size: 36px;
+            @media (max-width: 991.98px) {
+                font-size: 1.5rem;
             }
         }
     }
@@ -463,7 +509,7 @@ main{
     &__intro {
         margin-bottom: 3.75rem;
         @media (max-width: 991.98px) {
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
         h2 {
             @include fontMaker($font1, 2.25rem, 300, 2rem);
@@ -471,8 +517,12 @@ main{
             text-transform: capitalize;
             padding: 0 0.5rem 0 0.5rem;
             text-align: center;
-            @media (max-width: 767.98px) {
-                font-size: 36px;
+            @media (max-width: 575.98px) {
+                font-size: 1.5rem;
+                list-style: 2.25rem;
+            }
+            @media (min-width: 576px) and (max-width: 991.98px) {
+                font-size: 1.25rem;
             }
         }
     }
@@ -490,11 +540,11 @@ main{
                 width: 100%;
             }
             @media (min-width: 576px) and (max-width: 991.98px) {
-                width: 40%;
+                width: 45%;
             }
             img{
                 width: 5.8288rem;
-                height: auto;
+                height: 5.1356rem;
                 margin-bottom: 2.5rem;
                 @media (max-width: 575.98px) {
                     width: 6rem;
@@ -504,9 +554,16 @@ main{
             h2{
                 @include fontMaker($font1, 1.5rem, 500, 2rem);
                 padding-bottom: 1rem;
+                @media (min-width: 992px) and (max-width: 1299.98px) {
+                    font-size: 1.25rem;
+                    padding-bottom: 0.75rem;
+                }
             }
             p{
                 @include fontMaker($font1, 0.85rem, 300, 1.25rem);
+                @media (min-width: 992px) and (max-width: 1299.98px) {
+                    font-size: 0.75rem;
+                }
             }
             &::before {
                 content: "";
@@ -531,7 +588,7 @@ main{
 }
 
 .about{
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 5rem 0;
     position: relative;
     z-index: 1;
     &__contents{
@@ -545,6 +602,10 @@ main{
             @include flexCenter;
             justify-content: flex-start;
             flex-wrap: wrap;
+            @media (max-width: 575.98px)  {
+                justify-content: center;
+                margin-top: 2rem;
+            }
             @media (max-width: 991.98px) {
                 text-align: center;
                 width: 100%;
@@ -574,7 +635,24 @@ main{
                             object-fit: cover;
                             margin: 0.75rem;
                             @media (max-width: 575.98px)  {
-                                margin: 0.35rem;
+                                width: 13.125rem;
+                                height: 13.125rem;
+                            }
+                            @media (min-width: 576px) and (max-width: 991.98px) {
+                                width: 100%;
+                                height: auto;
+                            }
+                            @media (min-width: 992px) and (max-width: 1299.98px) { 
+                                width: 10rem;
+                                height: 10rem;
+                            }
+                            @media (min-width: 1300px) and (max-width: 1531.98px){ 
+                                width: 12rem;
+                                height: 12rem;
+                            }
+                            @media (min-width: 1532px) and (max-width: 1698.99px) {
+                                width: 12rem;
+                                height: 12rem;
                             }
                             @media (min-width: 321px) and (max-width: 376px) {
                                 width: 12rem;
@@ -583,6 +661,10 @@ main{
                             @media (max-width: 320px) {
                                 width: 11rem;
                                 height: 11rem;
+                            }
+                            @media (min-width: 2500px) {
+                                width: 14rem;
+                                height: 14rem;
                             }
                         }
                     }
@@ -621,7 +703,6 @@ main{
                 padding-left: 0;
                 width: 100%;
                 order: 1;
-                margin-bottom: 5rem;
             }
             @media (min-width: 992px) and (max-width: 1299.98px) {
                 padding-left: 0;
@@ -636,7 +717,8 @@ main{
                     @include fontMaker($font1, 2rem, 400, 2.75rem);
                     padding: 0 0 1.5rem 0;
                     @media (max-width: 575.98px)  {
-                        font-size: 2.125rem;
+                        font-size: 1.5rem;
+                        line-height: 2.25rem;
                     }
                     @media (max-width: 320px) {
                         font-size: 2rem;
@@ -654,15 +736,15 @@ main{
 }
 
 .faq{
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 10rem 0;
     position: relative;
-    @media (max-width: 767.98) {
-        padding: 30px 0 30px 0;
+    @media (max-width: 991.98px) {
+        padding: 5rem 0 5rem 0;
     }
     &__intro {
         margin-bottom: 3.75rem;
         @media (max-width: 991.98px) {
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
         h2 {
             @include fontMaker($font1, 2.25rem, 300, 2rem);
@@ -670,8 +752,8 @@ main{
             text-transform: capitalize;
             padding: 0 0.5rem 0 0.5rem;
             text-align: center;
-            @media (max-width: 767.98px) {
-                font-size: 36px;
+            @media (max-width: 991.98px) {
+                font-size: 1.75rem;
             }
         }
     }
@@ -686,10 +768,6 @@ main{
             li{
                 cursor: pointer;
                 position: relative;
-                // border-radius: 0.9375rem;
-                // border: 0.714px solid rgba(161, 198, 221, 0.20);
-                // background: linear-gradient(138deg, rgba(161, 198, 221, 0.50) 0%, rgba(161, 198, 221, 0.22) 100%);
-                // backdrop-filter: blur(1.5625rem);
                 @media (max-width:479.98px){
                     border-radius: 1.5rem;
                 }
@@ -705,22 +783,22 @@ main{
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    border-radius: 20px;
+                    border-radius: 1.25rem;
                 }
                 button{
                     border-radius: 0.9375rem;
                     background: inherit;
                     display: flex;
                     align-items: center;
-                    padding: 40px 60px;
+                    padding: 2.5rem 3.75rem;
                     width: 100%;
                     position: relative;
                     border: none;
-                    @media (max-width: 767.98px) {
-                        padding: 30px;
+                    @media (max-width: 575.98px)  {
+                        padding: 1.75rem 2.5rem;
                     }
-                    @media (max-width: 479.98px) {
-                        padding: 20px;
+                    @media (min-width: 576px) and (max-width: 991.98px) {
+                        padding: 1.75rem 2.5rem;
                     }
                     .accordions__title {
                         color: $yellow;
@@ -728,29 +806,29 @@ main{
                         text-transform: capitalize;
                         flex: 1 1 auto;
                         display: flex;
-                        line-height: 120%;
                         padding-right: 1.25rem;
                         justify-content: flex-start;
                         text-align: left;
-                        @media (max-width: 767.98px) {
-                            font-size: 20px;
+                        @media (max-width: 991.98px) {
+                            font-size: 1rem;
+                            line-height: 1.5rem;
                         }
                     }
   
                     .accordions__icon {
-                        flex: 0 0 40px;
+                        flex: 0 0 2.5rem;
                         display: flex;
-                        width: 40px;
-                        height: 40px;
-                        border: 2px $pink solid;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border: 0.125rem $pink solid;
                         border-radius: 50%;
                         position: relative;
                         transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
                         @media (max-width: 479.98px) {
-                            flex: 0 0 32px;
+                            flex: 0 0 2rem;
                             display: flex;
-                            width: 32px;
-                            height: 32px;
+                            width: 2rem;
+                            height: 2rem;
                         }
                         &::before {
                             content: "";
@@ -762,8 +840,8 @@ main{
                             left: 50%;
                             transform: translate(-50%, -50%);
                             @media (max-width: 479.98px) {
-                                width: 15px;
-                                height: 2px;
+                                width: 0.9375rem;
+                                height: 0.125rem;
                             }
                         }
                         &::after {
@@ -776,14 +854,14 @@ main{
                             left: 50%;
                             transform: translate(-50%, -50%) rotate(90deg);
                             @media (max-width: 479.98px) {
-                              width: 15px;
-                              height: 2px;
+                              width: 0.9375rem;
+                              height: 0.125rem;
                             }
                         }
                     }
                 }
                 .accordions__text {
-                    padding: 0 60px 0 60px;
+                    padding: 0 3.75rem;
                     max-height: 0;
                     overflow: hidden;
                     will-change: max-height;
@@ -791,28 +869,26 @@ main{
                     box-sizing: content-box;
                     position: relative;
                     z-index: 5;
-                    @media (max-width: 767.98px) {
-                        padding: 0 30px 0 30px;
+                    @media (max-width: 575.98px)  {
+                        padding: 0 2.5rem;
                     }
-                    @media (max-width: 479.98px) {
-                        padding: 0 20px 0 20px;
+                    @media (min-width: 576px) and (max-width: 991.98px) {
+                        padding: 0 2.5rem;
                     }
                     P{
                         color: $white;
                         @include fontMaker($font1, 1.125rem, 400, 1.75rem);
-                        @media (max-width: 479.98px) {
-                            font-size: 16px;
+                        @media (max-width: 991.98px) {
+                            font-size: 0.75rem;
+                            line-height: 1.25rem;
                         }
                     }
                 }
             }
             .open .accordions__text {
-                padding: 0 3.75rem 1.25rem 3.75rem;
-                @media (max-width:767.98px){
-                    padding:20px 30px;
-                }
-                @media (max-width:479.98px){
-                    padding: 0px 20px 20px 20px;    
+                padding-bottom: 2rem;
+                @media (max-width: 991.98px) {
+                    padding-bottom: 1.25rem;
                 }
             }
             .open .accordions__icon {
@@ -828,7 +904,7 @@ main{
         text-align: center;
         margin-bottom: 3.75rem;
         @media (max-width: 991.98px) {
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
         h2 {
             @include fontMaker($font1, 2.25rem, 300, 2rem);
@@ -836,12 +912,15 @@ main{
             text-transform: capitalize;
             padding: 0 0.5rem 1rem 0.5rem;
             text-align: center;
-            @media (max-width: 767.98px) {
-                font-size: 36px;
+            @media (max-width: 991.98px) {
+                font-size: 1.75rem;
             }
         }
         p{
             @include fontMaker($font1, 1.125rem, 400, 2rem);
+            @media (max-width: 991.98px) {
+                font-size: 1.25rem;
+            }
         }
     }
     &__contents{
@@ -851,13 +930,21 @@ main{
         padding: 4rem 1rem;
         border-radius: 1.25rem;
         @include flexCenter;
-        @media (max-width: 575.98px) {
+        @media (max-width: 991.98px) {
+            flex-direction: column;
             width: 100%;
-            padding: 5rem 1.5rem;
+            padding: 2rem;
         }
-        @media (min-width: 576px) and (max-width: 1299.98px) {
+        @media (min-width: 992px) and (max-width: 1299.98px) { 
             width: 100%;
-            padding: 5rem;
+            padding: 4rem;
+        }
+        @media (min-width: 1300px) and (max-width: 1531.98px){ 
+            padding: 4rem;
+        }
+        @media (min-width: 1532px) and (max-width: 1698.99px) {
+        }
+        @media (min-width: 2500px) {
         }
         &::before{
             content: "";
@@ -879,10 +966,17 @@ main{
                 font-weight: 400;
                 text-transform: uppercase;
                 padding-bottom: 1.5rem;
+                @media (max-width: 991.98px) {
+                    font-size: 1.25rem;
+                    padding-bottom: 0.75rem;
+                }
             }
             p{
                 @include fontMaker($font1, 1.125rem, 400, 2rem);
                 margin: 0 auto;
+                @media (max-width: 991.98px) {
+                    font-size: 1rem;
+                }
                 @media (max-width: 1299.98px) {
                     width: 100%;
                 }
@@ -890,6 +984,12 @@ main{
             form{
                 padding: 2rem 0 1rem 0;
                 width: 92%;
+                @media (max-width: 991.98px) {
+                   width: 100%;
+                }
+                @media (min-width: 992px) and (max-width: 1299.98px) { 
+                    width: 100%;
+                }
                 .fields{
                     @include flexCenter;
                     align-items: flex-start;
@@ -905,10 +1005,11 @@ main{
                         border: 0.1rem solid $white;
                         box-sizing: border-box;
                         border-radius: 1rem;
-                        @media (max-width: 575.98px) {
+                        @media (max-width: 991.98px) {
                             width: 100%;
+                            font-size: 1rem;
                         }
-                        @media (min-width: 576px) and (max-width: 1299.98px) {
+                        @media (min-width: 992px) and (max-width: 1299.98px) {
                             width: 80%;
                         }
                     }
@@ -927,6 +1028,10 @@ main{
             .thumb{
                 width: 36.9375rem;
                 height: auto;
+                @media (max-width: 575.98px) {
+                    width: 100%;
+                    padding-top: 4rem;
+                }
             }
             ul{
                 padding-top: 1rem;
