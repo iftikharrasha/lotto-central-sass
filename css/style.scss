@@ -44,7 +44,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     transition: all 0.3s ease-in-out;
 	scrollbar-color: $white;
-	scrollbar-width: thin
+	scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
@@ -54,17 +54,17 @@ body {
 
 ::-webkit-scrollbar-track {
 	border-radius: 2px;
-	background: $pink;
+	background: $white;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $white;
+	background: $yellow;
 	border-radius: 2px;
 	margin: 0
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $white;
+	background: $yellow;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -116,33 +116,7 @@ main{
     }
 }
 
-// .container {
-//     display: block;
-//     width: 90%;
-//     max-width: 100%;
-//     padding: 0 4rem;
-//     margin: 0 auto;
-//     @media (max-width: 575.98px) {
-//         padding: 0 2rem;
-//     }
-// }
-
 .container {
-    // @media (min-width: 576px) and (max-width: 767.98px) {
-    //     max-width: 720px;
-    // }
-    // @media (min-width: 1200px) and (max-width: 1299.98px) {
-    //     max-width: 60rem;
-    // }
-    // @media (min-width: 1300px) and (max-width: 1599.98px){
-    //     max-width: 90rem;
-    // }
-    // @media (min-width: 1600px) and (max-width: 2499.99px) {
-    //     max-width: 95rem;
-    // }
-    // @media (min-width: 2500px) {
-    //     max-width: 90rem;
-    // }
     max-width: 100% !important;
     padding: 0 13rem;
     @media (max-width: 575.98px) {
@@ -185,14 +159,14 @@ main{
 
 .main__btn{
     @include flexCenter;
-    @include fontMaker($font1, 1rem, 700, normal);
+    @include fontMaker($font2, 1.125rem, 700, normal);
     background-color: $yellow;
     text-transform: uppercase;
     position: relative;
     display: inline-flex;
     flex-wrap: wrap;
     vertical-align: middle;
-    padding: 0.3rem 1.5625rem;
+    padding: 0.3rem 1.25rem;
     min-height: 2.5rem;
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -207,79 +181,211 @@ main{
     }
 }
 
-.header{
-    transition: all 0.5s ease 0s;
+.header {
     position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
     top: 0;
-    z-index: 9999;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
     transition: all 0.5s ease 0s;
-    &__content{
-        #brand{
+    padding: 1rem 0;
+    @media (max-width: 991.98px) {
+        padding: 0;
+    }
+    .header-contents{
+        @include flexCenter;
+        justify-content: space-between;
+        @media (max-width: 991.98px) {
+            padding: 0;
+            justify-content: space-between;
+        }
+        .logo{
             width: 10.375rem;
             height: auto;
             transition: all 0.3s ease 0s;
+            transition: all 0.5s ease 0s;
         }
-        ul{
-            @include flexBetween;
-            li{
-                margin-right: 0.5rem;
-                a{
-                    color: $white;
-                    @include fontMaker($font1, 1.125rem, 400, normal);
-                    transition: all 0.3s ease 0s;
-                    .telegram{
-                        width: 1.65rem;
-                        height: auto;
-                    }
-                    .twitter{
-                        width: 1.75rem;
-                        height: auto;
-                    }
-                    .medium{
-                        width: 2rem;
-                        height: auto;
+        .nav-right{
+            width: 50%;
+            transition: all 0.3s ease 0s;
+            @media (max-width: 991.98px) {
+                display: none;
+            }
+            ul{
+                @include flexBetween;
+                li{
+                    margin-right: 0.5rem;
+                    a{
+                        color: $white;
+                        @include fontMaker($font1, 1.125rem, 400, normal);
+                        transition: all 0.3s ease 0s;
                     }
                 }
+            }
+        }
+    
+        .mobile-design{
+            .nav-toggle {
+                z-index: 9000;
+                cursor: pointer;
+                padding-right: 1rem;
+                .top{
+                    display: block;
+                    width: 1.625rem;
+                    height: 0.125rem;
+                    background-color: $white;
+                    transition: all 0.5s ease 0s;
+                    margin-bottom: 0.35rem;
+                }
+                .mid{
+                    display: block;
+                    width: 1.625rem;
+                    height: 0.125rem;
+                    background-color: $white;
+                    transition: all 0.5s ease 0s;
+                    margin-bottom: 0.35rem;
+                    position: relative;
+                }
+                .bot{
+                    display: block;
+                    width: 1.625rem;
+                    height: 0.125rem;
+                    background-color: $white;
+                    transition: all 0.5s ease 0s;
+                }
+                .top, .bot {
+                    transform-origin: 0.1875rem 0.125rem;
+                }
+            }
+            .nav-full{
+                ul{
+                    position: absolute;
+                    width: 70%;
+                    background-color: #151339;
+                    top: 0;
+                    right: -100%;
+                    height: 100vh;
+                    display: grid;
+                    grid-template-rows: repeat(5, 10vh);
+                    align-content: center;
+                    justify-content: space-around;
+                    transition: all 0.5s ease 0s;
+                    text-align: center;
+                    @media (min-width: 576px) and (max-width: 991.98px) {
+                        width: 50%;
+                    }
+                    li{
+                        a {
+                            text-align: center;
+                            font-size: 1.25rem;
+                            color: $white;
+                        }
+                        &:last-child{
+                            a {
+                                border: 0.125rem solid $white;
+                                padding: 0.75rem 1.75rem;
+                                border-radius: 1.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.open{
+    .mid {
+        opacity: 0;
+    }
+    .top {
+        transform: rotate(45deg);
+    }
+    .bot {
+        transform: rotate(-45deg);
+    }
+    .nav-full{
+        ul{
+            right: 0 !important;
+            a {
+                @include fontMaker($font1, 1.125rem, 400, normal);
             }
         }
     }
 }
 
 .sticky {
-    transition: all 0.5s ease 0s;
+    padding: 0;
     box-shadow: 0px 0.1875rem 0.375rem $blue;
+    transition: all 0.5s ease 0s;
     background: $blue;
-    @media (min-width: 992px) {   
-        #brand{
-            width: 7rem;
-            transition: all 0.3s ease 0s;
+    .header-contents{
+        .logo{
+            transition: all 0.5s ease 0s;
         }
-        ul{
-            li{
-                a{
-                    @include fontMaker($font1, 0.85rem, 400, normal);
-                    transition: all 0.3s ease 0s;
-                }
-                button{
-                    font-size: 0.85rem;
-                    padding: 0.3rem 1.25rem;
-                    min-height: 2rem;
-                    transition: all 0.3s ease 0s;
+        .nav-right{
+            width: 40%;
+            transition: all 0.3s ease 0s;
+            ul{
+                li{
+                    a{
+                        font-size: 1rem;
+                        transition: all 0.5s ease 0s;
+                    }
                 }
             }
         }
     }
 }
 
+.desktop-hidden {
+    display: none;
+    @media (max-width: 991.98px) {
+        display: inherit;
+    }
+}
+
 .hero{
     padding: 10rem 0 8.5rem 0;
+    position: relative;
     @media (max-width: 991.98px) {
         padding-bottom: 4rem;
     }
-    position: relative;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     border-radius: 16.75rem;
+    //     background: linear-gradient(-45deg,#1b1a43 5%,#122e47);
+    //     top: calc(100% - 1.25rem);
+    //     left: 0;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     width: 35rem;
+    //     height: 35rem;
+    //     filter: blur(5rem);
+    //     z-index: -1;
+    //     @media (max-width: 575.98px) {
+    //         width: 20rem;
+    //         height: 20rem;
+    //         top: calc(80% - 1.25rem);
+    //         border-radius: 5rem;
+    //     }
+    //     @media (min-width: 576px) and (max-width: 991.98px) {
+    //         width: 20rem;
+    //         height: 20rem;
+    //         top: calc(80% - 1.25rem);
+    //         border-radius: 10rem;
+    //     }
+    //     @media (min-width: 992px) and (max-width: 1299.98px) {
+    //         width: 20rem;
+    //         height: 20rem;
+    //         top: calc(80% - 1.25rem);
+    //     }
+    // }
     &__content{
         @include flexBetween;
         @media (max-width: 991.98px) {
@@ -375,7 +481,7 @@ main{
             .controls {
                 display: block;
                 position: absolute;
-                right: 20px;
+                right: 1.25rem;
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 999;
@@ -408,9 +514,8 @@ main{
                     overflow: hidden;
                     margin-right: 1rem;
                     cursor: grabbing;
-                    width: 29.6369rem;
+                    width: 30rem;
                     min-height: auto;
-                    // min-height: 17.5rem;
                     cursor: pointer;
                     backdrop-filter: blur(1rem);
                     @media (max-width: 575.98px) {
@@ -450,6 +555,10 @@ main{
                             @include flexCenter;
                             flex-direction: column;
                             align-items: flex-start;
+                            img{
+                                width: 11.25rem;
+                                height: auto;
+                            }
                         }
                         .right{
                             width: 12.25rem;
@@ -591,6 +700,21 @@ main{
     padding: 10rem 0 5rem 0;
     position: relative;
     z-index: 1;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     border-radius: 16.75rem;
+    //     background: linear-gradient(-45deg,#1b1a43 5%,#122e47);
+    //     top: calc(25% - 1.25rem);
+    //     left: 0;
+    //     right: 0;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     width: 40rem;
+    //     height: 40rem;
+    //     filter: blur(5rem);
+    //     z-index: -1;
+    // }
     &__contents{
         @include flexCenter;
         @media (max-width: 991.98px) {
@@ -900,6 +1024,21 @@ main{
 
 .contact{
     padding: 10rem 0 0 0;
+    position: relative;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     border-radius: 16.75rem;
+    //     background: linear-gradient(-45deg,#1b1a43 5%,#122e47);
+    //     top: calc(50% - 1.25rem);
+    //     left: 0;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     width: 40rem;
+    //     height: 40rem;
+    //     filter: blur(5rem);
+    //     z-index: -1;
+    // }
     &__intro {
         text-align: center;
         margin-bottom: 3.75rem;
@@ -1055,142 +1194,55 @@ main{
 .footer{
     position: relative;
     overflow: hidden;
-    padding: 2rem 0 12rem 0;
-    @media (max-width: 991.98px) {
-        padding-bottom: 7rem;
-    }
-    &__links{
-        padding: 2rem 0;
+    padding: 2rem 0 2rem 0;
+    &__quick{
+        padding: 10rem 0 0 0;
+        border-bottom: 0.0313rem solid rgb(105, 105, 105);
         ul{
             @include flexCenter;
+            padding: 2rem 0;
             li{
-                margin: 0 0.5rem;
+                margin: 0 1.5rem;
                 a{
-                    font-size: 0.75rem;
+                    @include fontMaker($font1, 0.75rem, 700, 1.75rem);
                     color: $white;
                 }
             }
         }
-        &__top{
-            margin-bottom: 0.5rem;
-            li{
-                a{
-                    font-weight: 600;
-                }
-            }
-        }
-        &__below{
-            flex-wrap: wrap;
-            li{
-                margin: 1rem 1rem 0.25rem 1rem !important;
-                @media (max-width: 575.98px) {
-                    margin: 0.5rem 0.5rem 0.25rem 0.5rem !important;
-                }
-                a{
-                    font-weight: 400;
-                    opacity: 0.5;
-                }
-            }
-        }
-    }
-    &__payments{
-        padding: 2rem 0;
-        text-align: center;
-        p{
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: $blue;
-            padding-bottom: 2rem;
-        }
-        .show{
-            font-size: 0.625rem;
-            color: $blue;
-            justify-content: center !important;
-        }
-        ul{
-            @include flexCenter;
-            margin: 0 auto;
-            li{
-                margin: 0 1rem;
-                a{
-                    font-size: 0.75rem;
-                    color: $white;
-                }
-            }
-        }
-        &__top{
-            &__row{
-                margin-bottom: 0.75rem;
-                .secure{
-                    margin: 0 1rem;
-                    li{
-                        img{
-                            width: 5.0681rem;
-                            height: 2.3462rem;
-                            @media (max-width: 575.98px) {
-                                width: 4rem;
-                            }
-                        }
-                    }
-                }
-                .best{
-                    width: 95%;
-                    flex-wrap: wrap;
-                    @media (max-width: 575.98px) {
-                        width: 100%;
-                    }
-                    li{
-                        img{
-                            width:7.1787rem;
-                            height: auto;
-                            @media (max-width: 575.98px) {
-                                width: 5.5rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &__content{
-        text-align: center;
-        color: #656D7D;
-        padding-top: 2rem;
         img{
-            width: 3.75rem;
+            width: 7.0144rem;
             height: auto;
         }
-        h5{
-            font-size: 0.875rem;
-            line-height: 1.5;
-            margin: 1rem 0;
-        }
-        p{
-            font-size: 0.875rem;
-            line-height: 1.5;
-            span{
-                color: $blue;
-                @media (max-width: 991.98px) {
-                    display: block;
+    }
+    &__links{
+        padding: 2rem 0 1rem 0;
+        .social-icons{
+            .copyright{
+                @include flexBetween;
+                padding-bottom: 2rem;
+                h6{
+                    @include fontMaker($font1, 1rem, 700, 1.75rem);
                 }
             }
-        }
-    }
-    .social-icons{
-        ul{
-            display: flex;
-            li{
-                margin-right: 1.5rem;
-                a{
-                    img{
-                        width: 2rem;
-                        height: 2rem;
-                        transition: all 0.1s ease 0s;
-                        &:hover {
-                            transform: scale(1.5);
+            ul{
+                @include flexBetween;
+                li{
+                    margin-right: 1rem;
+                    a{
+                        img{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            transition: all 0.1s ease 0s;
+                            &:hover {
+                                // transform: scale(1.5);
+                            }
                         }
                     }
                 }
+            }
+            p{
+                @include fontMaker($font1, 0.875rem, 300, 1.25rem);
+                color: #C2C2C2;
             }
         }
     }
