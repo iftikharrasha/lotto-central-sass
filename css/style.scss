@@ -203,7 +203,7 @@ main{
     transition: all 0.5s ease 0s;
     padding: 1rem 0;
     @media (max-width: 991.98px) {
-        padding: 0;
+        padding: 0.125rem 0;
     }
     .header-contents{
         @include flexCenter;
@@ -216,7 +216,10 @@ main{
             width: 10.375rem;
             height: auto;
             transition: all 0.3s ease 0s;
-            transition: all 0.5s ease 0s;
+            // @media (max-width: 575.98px) {
+            //     width: 135px;
+            //     height: 73px;
+            // }
         }
         .nav-right{
             width: 50%;
@@ -433,7 +436,7 @@ main{
                     font-size: 2.5rem;
                 }
                 span{
-                    font-weight: 400;
+                    font-weight: 700;
                 }
             }
             p{

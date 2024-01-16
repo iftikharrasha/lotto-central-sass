@@ -275,7 +275,7 @@ main::before {
 
 @media (max-width: 991.98px) {
   .header {
-    padding: 0;
+    padding: 0.125rem 0;
   }
 }
 
@@ -308,8 +308,6 @@ main::before {
   height: auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 
 .header .header-contents .nav-right {
@@ -603,7 +601,7 @@ main::before {
 }
 
 .hero__content__left h1 span {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .hero__content__left p {
