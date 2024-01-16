@@ -13,7 +13,7 @@ html {
         font-size: 12px;
     }
     @media (min-width: 576px) and (max-width: 991.98px) {
-        font-size: 16px;
+        font-size: 12px;
     }
     @media (min-width: 992px) and (max-width: 1299.98px) {
         font-size: 12px;
@@ -159,15 +159,15 @@ main{
 
 .main__btn{
     @include flexCenter;
-    @include fontMaker($font2, 1.125rem, 700, normal);
+    @include fontMaker($font2, 1.25rem, 700, normal);
     background-color: $yellow;
     text-transform: uppercase;
     position: relative;
     display: inline-flex;
     flex-wrap: wrap;
     vertical-align: middle;
-    padding: 0.3rem 1.25rem;
-    min-height: 2.5rem;
+    padding: 0.5rem 1.25rem;
+    min-height: 2.25rem;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     text-transform: capitalize;
@@ -179,6 +179,15 @@ main{
         background-color: $pink;
         color: $white;
     }
+}
+
+.btn2{
+    background-color: $white;
+    font-size: 1rem;
+}
+
+.navBtn{
+    color: $black !important;
 }
 
 .header {
@@ -236,16 +245,16 @@ main{
                 .top{
                     display: block;
                     width: 1.625rem;
-                    height: 0.125rem;
-                    background-color: $white;
+                    height: 0.15rem;
+                    background-color: $yellow;
                     transition: all 0.5s ease 0s;
                     margin-bottom: 0.35rem;
                 }
                 .mid{
                     display: block;
                     width: 1.625rem;
-                    height: 0.125rem;
-                    background-color: $white;
+                    height: 0.15rem;
+                    background-color: $yellow;
                     transition: all 0.5s ease 0s;
                     margin-bottom: 0.35rem;
                     position: relative;
@@ -253,42 +262,58 @@ main{
                 .bot{
                     display: block;
                     width: 1.625rem;
-                    height: 0.125rem;
-                    background-color: $white;
+                    height: 0.15rem;
+                    background-color: $yellow;
                     transition: all 0.5s ease 0s;
                 }
                 .top, .bot {
-                    transform-origin: 0.1875rem 0.125rem;
+                    transform-origin: 0.15rem 0.125rem;
                 }
             }
             .nav-full{
+                position: absolute;
+                width: 100%;
+                background-color: #151339;
+                top: 0;
+                left: -100%;
+                height: 100vh;
+                transition: all 0.5s ease 0s;
+                @media (min-width: 576px) and (max-width: 991.98px) {
+                    width: 50%;
+                }
                 ul{
                     position: absolute;
-                    width: 70%;
-                    background-color: #151339;
-                    top: 0;
-                    right: -100%;
-                    height: 100vh;
-                    display: grid;
-                    grid-template-rows: repeat(5, 10vh);
-                    align-content: center;
-                    justify-content: space-around;
-                    transition: all 0.5s ease 0s;
-                    text-align: center;
-                    @media (min-width: 576px) and (max-width: 991.98px) {
-                        width: 50%;
-                    }
+                    padding: 2.5rem 0 0 2.75rem;
                     li{
+                        margin-bottom: 2rem;
                         a {
-                            text-align: center;
-                            font-size: 1.25rem;
+                            @include fontMaker($font1, 1.5rem, 700, normal);
                             color: $white;
+                            @include flexCenter;
+                            justify-content: flex-start;
+                            button{
+                                font-size: 1.75rem;
+                            }
+                            img{
+                                margin-right: 0.75rem;
+                            }
                         }
-                        &:last-child{
-                            a {
-                                border: 0.125rem solid $white;
-                                padding: 0.75rem 1.75rem;
-                                border-radius: 1.75rem;
+                    }
+                }
+                .social-icons{
+                    ul{
+                        position: absolute;
+                        left: 0;
+                        bottom: 7.5rem;
+                        @include flexBetween;
+                        li{
+                            margin-right: 1.75rem;
+                            a{
+                                img{
+                                    width: 2rem;
+                                    height: 2rem;
+                                    transition: all 0.1s ease 0s;
+                                }
                             }
                         }
                     }
@@ -309,12 +334,7 @@ main{
         transform: rotate(-45deg);
     }
     .nav-full{
-        ul{
-            right: 0 !important;
-            a {
-                @include fontMaker($font1, 1.125rem, 400, normal);
-            }
-        }
+        left: 0 !important;
     }
 }
 
@@ -350,10 +370,10 @@ main{
 }
 
 .hero{
-    padding: 10rem 0 8.5rem 0;
+    padding: 10rem 0 4rem 0;
     position: relative;
     @media (max-width: 991.98px) {
-        padding-bottom: 4rem;
+        padding: 8rem 0 0 0;
     }
     // &:before {
     //     content: "";
@@ -388,13 +408,20 @@ main{
     // }
     &__content{
         @include flexBetween;
+        @media (max-width: 575.98px) {
+           text-align: center;
+        }
         @media (max-width: 991.98px) {
             flex-direction: column;
         }
         &__left{
             padding-right: 2rem;
+            @media (max-width: 991.98px) {
+                order: 2;
+                padding-top: 2rem;
+            }
             h1{
-                @include fontMaker($font1, 3.3125rem, 300, normal);
+                @include fontMaker($font1, 3.3125rem, 700, normal);
                 margin: 1.5rem 0;
                 @media (max-width: 575.98px) {
                     font-size: 2rem;
@@ -419,9 +446,15 @@ main{
             }
         }
         &__right{
+            @media (max-width: 575.98px) {
+                order: 1;
+            }
             img{
                 width: 34.125rem;
                 height: auto;
+                @media (max-width: 991.98px) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -433,18 +466,26 @@ main{
 }
 
 .gallery {
-    padding: 4rem 0 6rem 0;
+    padding: 10rem 0 3rem 0;
     position: relative; 
+    @media (max-width: 991.98px) {
+        padding: 7rem 0 0 0;
+    }
     .container{
-        padding-right: 0 !important;
+        @media (min-width: 576px) {
+            padding-right: 0 !important;
+        }
     }
     &__text {
         @include flexCenter;
         justify-content: flex-start;
     }
     &__intro {
+        @media (max-width: 575.98px) {
+           text-align: center;
+        }
         h2 {
-            @include fontMaker($font1, 2.25rem, 300, 2rem);
+            @include fontMaker($font2, 2.25rem, 700, 2rem);
             position: relative;
             padding-bottom: 1rem;
             @media (max-width: 991.98px) {
@@ -465,56 +506,79 @@ main{
         cursor: pointer;
     }
     &__content {
-        padding: 2rem 0;
+        padding: 1rem 0 2rem 0;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 5rem;
-            background: linear-gradient(270deg, #30496b 0.9%, rgba(20, 55, 98, 0));
-            z-index: 2;
-        }
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     width: 5rem;
+        //     background: linear-gradient(270deg, #30496b 0.9%, rgba(20, 55, 98, 0));
+        //     z-index: 2;
+        // }
         &__slider{
-            .controls {
-                display: block;
-                position: absolute;
-                right: 1.25rem;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 999;
-                button{
-                    img {
-                        width: 0.4825rem;
-                        height: auto;
-                    }
-                }
-                &__prev {
-                    margin-bottom: 0.5rem;
-                    button {
-                        img {
-                            transform: rotate(180deg);
-                        }
-                    }
-                }
-                &__next {
-                    margin-top: 0.5rem;
-                }
-                .swiper-button-disabled {
-                    opacity: 0.25;
-                }
-            }
+            // .controls {
+            //     display: block;
+            //     position: absolute;
+            //     right: 1.25rem;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     z-index: 999;
+            //     button{
+            //         img {
+            //             width: 0.4825rem;
+            //             height: auto;
+            //         }
+            //     }
+            //     &__prev {
+            //         margin-bottom: 0.5rem;
+            //         button {
+            //             img {
+            //                 transform: rotate(180deg);
+            //             }
+            //         }
+            //     }
+            //     &__next {
+            //         margin-top: 0.5rem;
+            //     }
+            //     .swiper-button-disabled {
+            //         opacity: 0.25;
+            //     }
+            // }
             .gallerySlider{
+                .swiper-wrapper{
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
+                    grid-column-gap: 2rem;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                    @media (max-width: 575.98px) {
+                        grid-template-columns: repeat(1,1fr);
+                        column-gap: 1rem;
+                    }
+                    @media (min-width: 576px) and (max-width: 991.98px) {
+                        grid-template-columns: repeat(2,1fr);
+                        column-gap: 1rem;
+                    }
+                    @media (min-width: 992px) and (max-width: 1299.98px) {
+
+                    }
+                    @media (min-width: 1300px) and (max-width: 1531.98px){ 
+                    }
+                    @media (min-width: 1532px) and (max-width: 1698.99px) {
+                    }
+                    @media (min-width: 2500px) {
+                    }
+                }
                 &__single {
                     position: relative;
-                    width: 13rem;
+                    // width: 33rem;
                     border-radius: 0.625rem;
                     overflow: hidden;
                     margin-right: 1rem;
                     cursor: grabbing;
-                    width: 30rem;
                     min-height: auto;
                     cursor: pointer;
                     backdrop-filter: blur(1rem);
@@ -524,6 +588,9 @@ main{
                     &__img {
                         position: relative;
                         @include flexCenter;
+                        position: absolute;
+                        top: -0.5rem;
+                        left: 0;
                         img {
                             width: 100%;
                             height: auto;
@@ -539,51 +606,68 @@ main{
                         color: $white;
                         text-align: center;
                         border-radius: 0.625rem;
-                        padding: 1.25rem 1.25rem 0 1.25rem;
-                        position: absolute;
+                        padding: 0 1.25rem 0 1.25rem;
                         min-height: 13.25rem;
                         @include flexBetween;
-                        align-items: flex-start;
+                        // align-items: flex-start;
                         h4 {
-                            font-size: 0.875rem;
-                            font-weight: 400;
-                            padding-bottom: 3.5rem;
+                            padding-bottom: 1.5rem;
                             padding-top: 1rem;
-                            @include fontMaker($font1, 1.125rem, 700, 1.75rem);
+                            @include fontMaker($font1, 1.25rem, 700, 1.75rem);
+                            @media (min-width: 992px) and (max-width: 1299.98px) { 
+                                font-size: 1rem;
+                            }
+                            @media (min-width: 1300px) and (max-width: 1531.98px){ 
+                                font-size: 1.25rem;
+                            }
                         }
                         .left{
                             @include flexCenter;
                             flex-direction: column;
                             align-items: flex-start;
                             img{
-                                width: 11.25rem;
-                                height: auto;
+                                @media (max-width: 991.98px) {
+                                    width: 10rem;
+                                    height: auto;
+                                }
+                                @media (min-width: 992px) and (max-width: 1299.98px) { 
+                                    width: 11.25rem;
+                                    height: auto;
+                                }
+                                @media (min-width: 1300px) and (max-width: 1531.98px){ 
+                                    width: 10rem;
+                                    height: auto;
+                                }
                             }
                         }
                         .right{
-                            width: 12.25rem;
-                            height: 12.25rem;
+                            width: 10.5rem;
+                            height: 10.5rem;
                             border-radius: 50%;
                             background: linear-gradient(180deg, #FEE600 0%, #F39900 100%);
                             @include flexCenter;
                             flex-direction: column;
                             h5{
-                                @include fontMaker($font2, 2rem, 700, 100%);
+                                @include fontMaker($font2, 1.85rem, 700, 100%);
                                 margin-block-start: 0;
                                 margin-block-end: 0;
                                 @include flexCenter;
                                 align-items: flex-start;
                                 span{
-                                    @include fontMaker($font2, 6rem, 700, 70%);
+                                    @include fontMaker($font2, 5rem, 700, 85%);
                                 }
                             }
                             h6{
-                                @include fontMaker($font2, 1.75rem, 700, normal);
-                                padding-top: 1.5rem;
+                                @include fontMaker($font2, 1.5rem, 700, normal);
+                                padding-top: 0rem;
                             }
                         }
                     }
                 }
+            }
+            .seeAll{
+                text-align: center;
+                margin-top: 2rem;
             }
         }
     }
@@ -607,21 +691,24 @@ main{
         background: linear-gradient(0deg, rgba(179, 0, 116, 0.75) 6.19%, rgba(241, 79, 184, 0.85) 70.86%);
         .right{
             background: linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%);
-            color: $black;
+            color: $white;
         }
     }
 }
 
 .features{
     position: relative;
-    padding-top: 5rem;
+    padding: 8rem 0 0 0;
+    @media (max-width: 991.98px) {
+        padding: 5rem 0 0 0;
+    }
     &__intro {
         margin-bottom: 3.75rem;
         @media (max-width: 991.98px) {
             margin-bottom: 2rem;
         }
         h2 {
-            @include fontMaker($font1, 2.25rem, 300, 2rem);
+            @include fontMaker($font2, 2.25rem, 700, 2rem);
             position: relative;
             text-transform: capitalize;
             padding: 0 0.5rem 0 0.5rem;
@@ -697,9 +784,12 @@ main{
 }
 
 .about{
-    padding: 10rem 0 5rem 0;
+    padding: 10rem 0 3rem 0;
     position: relative;
     z-index: 1;
+    @media (max-width: 991.98px) {
+        padding: 5rem 0 0 0;
+    }
     // &:before {
     //     content: "";
     //     position: absolute;
@@ -717,18 +807,32 @@ main{
     // }
     &__contents{
         @include flexCenter;
+        align-items: flex-start;
+        @media (max-width: 575.98px) {
+           text-align: center;
+        }
         @media (max-width: 991.98px) {
             flex-direction: column;
         }
         &__left{
             width: 50%;
             position: relative;
-            @include flexCenter;
-            justify-content: flex-start;
-            flex-wrap: wrap;
+            // @include flexCenter;
+            // justify-content: flex-start;
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 1rem;
+            column-gap: 1rem;
+            row-gap: 1rem;
             @media (max-width: 575.98px)  {
                 justify-content: center;
                 margin-top: 2rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-column-gap: 2rem;
+                column-gap: 2rem;
+                row-gap: 1rem;
             }
             @media (max-width: 991.98px) {
                 text-align: center;
@@ -736,9 +840,12 @@ main{
                 order: 2;
             }
             div{
-                display: flex;
-                justify-content: center;
+                @include flexCenter;
                 flex-wrap: wrap;
+                width: 100%;
+                @media (max-width: 575.98px)  {
+                    width: 100%;
+                }
             }
             &__img{
                 &__flip{
@@ -752,44 +859,41 @@ main{
                         backface-visibility: hidden;
                     }
                     .front{
+                        width: 100%;
                         img{
                             cursor: pointer;
-                            width: 13.125rem;
-                            height: 13.125rem;
+                            width: 100%;
+                            height: auto;
+                            // width: 13.125rem;
+                            // height: 13.125rem;
                             object-fit: cover;
-                            margin: 0.75rem;
+                            // margin: 0.75rem;
                             @media (max-width: 575.98px)  {
-                                width: 13.125rem;
-                                height: 13.125rem;
+                                width: 100%;
+                                height: auto;
+                                margin: 0.75rem;
                             }
                             @media (min-width: 576px) and (max-width: 991.98px) {
                                 width: 100%;
                                 height: auto;
+                                margin: 0.75rem;
                             }
-                            @media (min-width: 992px) and (max-width: 1299.98px) { 
-                                width: 10rem;
-                                height: 10rem;
-                            }
-                            @media (min-width: 1300px) and (max-width: 1531.98px){ 
-                                width: 12rem;
-                                height: 12rem;
-                            }
-                            @media (min-width: 1532px) and (max-width: 1698.99px) {
-                                width: 12rem;
-                                height: 12rem;
-                            }
-                            @media (min-width: 321px) and (max-width: 376px) {
-                                width: 12rem;
-                                height: 12rem;
-                            }
-                            @media (max-width: 320px) {
-                                width: 11rem;
-                                height: 11rem;
-                            }
-                            @media (min-width: 2500px) {
-                                width: 14rem;
-                                height: 14rem;
-                            }
+                            // @media (min-width: 992px) and (max-width: 1299.98px) { 
+                            //     width: 11rem;
+                            //     height: 11rem;
+                            // }
+                            // @media (min-width: 1300px) and (max-width: 1531.98px){ 
+                            //     width: 12rem;
+                            //     height: 12rem;
+                            // }
+                            // @media (min-width: 1532px) and (max-width: 1698.99px) {
+                            //     width: 12rem;
+                            //     height: 12rem;
+                            // }
+                            // @media (min-width: 2500px) {
+                            //     width: 14rem;
+                            //     height: 14rem;
+                            // }
                         }
                     }
                     .back {
@@ -822,7 +926,7 @@ main{
         &__right{
             @include flexCenter;
             width: 50%;
-            padding-left: 1rem;
+            margin: 0.75rem;
             @media (max-width: 991.98px) {
                 padding-left: 0;
                 width: 100%;
@@ -831,9 +935,15 @@ main{
             @media (min-width: 992px) and (max-width: 1299.98px) {
                 padding-left: 0;
             }
+            @media (min-width: 992px) {
+                margin: 0 0.75rem;
+            }
+            @media (min-width: 1299.98px) {
+                padding-left: 2rem;
+            }
             &__text{
                 h6{
-                    @include fontMaker($font1, 1.25rem, 500, 2rem);
+                    @include fontMaker($font2, 1.25rem, 700, normal);
                     text-transform: uppercase;
                     padding-bottom: 1.5rem;
                 }
@@ -856,11 +966,14 @@ main{
     }
     p{
         @include fontMaker($font1, 1.125rem, 400, 2rem);
+        @media (max-width: 575.98px) {
+           text-align: center;
+        }
     }
 }
 
 .faq{
-    padding: 10rem 0 10rem 0;
+    padding: 10rem 0 3rem 0;
     position: relative;
     @media (max-width: 991.98px) {
         padding: 5rem 0 5rem 0;
@@ -871,7 +984,7 @@ main{
             margin-bottom: 2rem;
         }
         h2 {
-            @include fontMaker($font1, 2.25rem, 300, 2rem);
+            @include fontMaker($font2, 2.25rem, 700, 2rem);
             position: relative;
             text-transform: capitalize;
             padding: 0 0.5rem 0 0.5rem;
@@ -886,13 +999,13 @@ main{
             display: flex;
             flex-direction: column;
             gap: 1.8rem;
-            @media (max-width: 479.98px) {
+            @media (max-width: 575.98px) {
                 gap: 1.25rem;
             }
             li{
                 cursor: pointer;
                 position: relative;
-                @media (max-width:479.98px){
+                @media (max-width:575.98px){
                     border-radius: 1.5rem;
                 }
                 &::before {
@@ -937,6 +1050,9 @@ main{
                             font-size: 1rem;
                             line-height: 1.5rem;
                         }
+                        @media (max-width: 575.98px) {
+                           text-align: center;
+                        }
                     }
   
                     .accordions__icon {
@@ -948,7 +1064,7 @@ main{
                         border-radius: 50%;
                         position: relative;
                         transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-                        @media (max-width: 479.98px) {
+                        @media (max-width: 575.98px) {
                             flex: 0 0 2rem;
                             display: flex;
                             width: 2rem;
@@ -963,7 +1079,7 @@ main{
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            @media (max-width: 479.98px) {
+                            @media (max-width: 575.98px) {
                                 width: 0.9375rem;
                                 height: 0.125rem;
                             }
@@ -977,7 +1093,7 @@ main{
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%) rotate(90deg);
-                            @media (max-width: 479.98px) {
+                            @media (max-width: 575.98px) {
                               width: 0.9375rem;
                               height: 0.125rem;
                             }
@@ -995,6 +1111,7 @@ main{
                     z-index: 5;
                     @media (max-width: 575.98px)  {
                         padding: 0 2.5rem;
+                        text-align: center;
                     }
                     @media (min-width: 576px) and (max-width: 991.98px) {
                         padding: 0 2.5rem;
@@ -1025,6 +1142,12 @@ main{
 .contact{
     padding: 10rem 0 0 0;
     position: relative;
+    @media (max-width: 991.98px) {
+        padding: 3rem 0 0 0;
+    }
+    @media (max-width: 575.98px) {
+       text-align: center;
+    }
     // &:before {
     //     content: "";
     //     position: absolute;
@@ -1039,38 +1162,13 @@ main{
     //     filter: blur(5rem);
     //     z-index: -1;
     // }
-    &__intro {
-        text-align: center;
-        margin-bottom: 3.75rem;
-        @media (max-width: 991.98px) {
-            margin-bottom: 2rem;
-        }
-        h2 {
-            @include fontMaker($font1, 2.25rem, 300, 2rem);
-            position: relative;
-            text-transform: capitalize;
-            padding: 0 0.5rem 1rem 0.5rem;
-            text-align: center;
-            @media (max-width: 991.98px) {
-                font-size: 1.75rem;
-            }
-        }
-        p{
-            @include fontMaker($font1, 1.125rem, 400, 2rem);
-            @media (max-width: 991.98px) {
-                font-size: 1.25rem;
-            }
-        }
-    }
     &__contents{
         width: 100%;
         margin: 0 auto;
         position: relative;
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
         border-radius: 1.25rem;
-        @include flexCenter;
         @media (max-width: 991.98px) {
-            flex-direction: column;
             width: 100%;
             padding: 2rem;
         }
@@ -1081,9 +1179,34 @@ main{
         @media (min-width: 1300px) and (max-width: 1531.98px){ 
             padding: 4rem;
         }
-        @media (min-width: 1532px) and (max-width: 1698.99px) {
+        &__intro {
+            text-align: center;
+            margin-bottom: 3.75rem;
+            @media (max-width: 991.98px) {
+                margin-bottom: 2rem;
+            }
+            h2 {
+                @include fontMaker($font2, 2.25rem, 700, 2rem);
+                position: relative;
+                text-transform: capitalize;
+                padding: 0 0.5rem 1rem 0.5rem;
+                text-align: center;
+                @media (max-width: 991.98px) {
+                    font-size: 1.75rem;
+                }
+            }
+            p{
+                @include fontMaker($font1, 1.125rem, 400, 2rem);
+                @media (max-width: 991.98px) {
+                    font-size: 1.25rem;
+                }
+            }
         }
-        @media (min-width: 2500px) {
+        &__below{
+            @include flexCenter;
+            @media (max-width: 991.98px) {
+                flex-direction: column;
+            }
         }
         &::before{
             content: "";
@@ -1100,11 +1223,14 @@ main{
             border-radius: 20px;
         }
         &__left{
+            @media (max-width: 991.98px) {
+                order: 2;
+                margin-top: 2rem;
+            }
             h6{
-                font-size: 1.5rem;
-                font-weight: 400;
+                @include fontMaker($font2, 1.5rem, 700, normal);
                 text-transform: uppercase;
-                padding-bottom: 1.5rem;
+                padding-bottom: 0.5rem;
                 @media (max-width: 991.98px) {
                     font-size: 1.25rem;
                     padding-bottom: 0.75rem;
@@ -1131,8 +1257,10 @@ main{
                 }
                 .fields{
                     @include flexCenter;
-                    align-items: flex-start;
                     flex-direction: column;
+                    @media (min-width: 576px) {
+                        align-items: flex-start;
+                    }
                     input, textarea{
                         width: 100%;
                         font-family: $font1;
@@ -1164,12 +1292,15 @@ main{
             }
         }
         &__right{
+            @media (max-width: 991.98px) {
+                order: 1;
+            }
             .thumb{
                 width: 36.9375rem;
                 height: auto;
                 @media (max-width: 575.98px) {
                     width: 100%;
-                    padding-top: 4rem;
+                    padding-top: 0;
                 }
             }
             ul{
@@ -1195,6 +1326,9 @@ main{
     position: relative;
     overflow: hidden;
     padding: 2rem 0 2rem 0;
+    @media (max-width: 991.98px) {
+        padding: 0 0 2rem 0;
+    }
     &__quick{
         padding: 10rem 0 0 0;
         border-bottom: 0.0313rem solid rgb(105, 105, 105);
