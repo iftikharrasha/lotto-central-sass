@@ -32,7 +32,7 @@ export const Login = () => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/users/login",
+        "https://api.lottocentral.in/dev/users/login",
         formdata
       );
 

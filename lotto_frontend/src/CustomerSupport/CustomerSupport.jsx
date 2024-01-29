@@ -33,7 +33,7 @@ export const CustomerSupport = () => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/contact/us/submit",
+        "https://api.lottocentral.in/dev/contact/us/submit",
         payload
       );
       console.log("payloadpayload", payload);

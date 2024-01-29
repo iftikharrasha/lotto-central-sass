@@ -70,7 +70,7 @@ export const Navbar = () => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/inquiry/user/create",
+        "https://api.lottocentral.in/dev/inquiry/user/create",
         { email: email }
       );
       if (response.status === 200 || response.status === 201) {
@@ -104,7 +104,7 @@ export const Navbar = () => {
           </div>
         </div>
       )}
-      <header className="header" id="header" style={{ background: "#0E0C31", zIndex:"99999" }}>
+      <header className="header" id="header" style={{ background: "#0E0C31", }}>
         <div className="container" style={{ width: "100%" }}>
           <div className="header-contents">
             <div
@@ -112,7 +112,7 @@ export const Navbar = () => {
               data-aos-duration="1000"
               data-aos-once="true"
             >
-              <a href="index.html" data-aos="flip-up">
+              <a href="/" data-aos="flip-up">
                 <img
                   className="logo"
                   src={headerImg}
@@ -203,7 +203,7 @@ export const Navbar = () => {
                         Logout
                       </button>
                     ) : (
-                      <button className="main__btn">Login</button>
+                      null
                     )}
                   </li>
                 </NavLink>

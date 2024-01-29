@@ -73,7 +73,7 @@ export const Lotteries = () => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/inquiry/user/create",
+        "https://api.lottocentral.in/dev/inquiry/user/create",
         { email: email }
       );
 
@@ -95,25 +95,31 @@ export const Lotteries = () => {
   const [isLoading, setIsLoading] = useState(false);
   const allImages = [
     {
+      img: megaLotoImg5,
+    },
+    {
+      img: megaLotoImg7,
+    },
+    {
+      img: megaLotoImg4,
+    },
+    {
       img: megaLotoImg1,
     },
     {
       img: megaLotoImg3,
     },
     {
-      img: megaLotoImg4,
-    },
-    {
-      img: megaLotoImg5,
+      img: megaLotoImg3,
     },
     {
       img: megaLotoImg6,
     },
     {
-      img: megaLotoImg7,
+      img: megaLotoImg5,
     },
     {
-      img: megaLotoImg3,
+      img: megaLotoImg4,
     },
     {
       img: megaLotoImg5,
@@ -122,38 +128,47 @@ export const Lotteries = () => {
   const allColor = [
     {
       color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      background:"linear-gradient(315deg, #27A5E4 5.75%, #2B1357 94.25%)",
       color1:"",
     },
     {
       color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
+      background:"linear-gradient(315deg, #68D030 5.75%, #0B7338 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
       color1:"",
     },
     {
       color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      background:"linear-gradient(315deg, #00C7E5 5.75%, #01AAC4 94.25%)",
       color1:"",
     },
     {
       color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
+      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
     
@@ -172,7 +187,7 @@ export const Lotteries = () => {
     try {
       setIsLoading(true);
       const res = await axios.get(
-        `http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/lotteries/get`
+        `https://api.lottocentral.in/dev/lotteries/get`
       );
       if (res.status === 200) {
         console.log("dataaaa", res?.data);
@@ -242,10 +257,10 @@ export const Lotteries = () => {
                         key={index}
                         className="swiper-slide gallerySlider__single green"
                         style={{
-                          background: `linear-gradient(0deg, ${hexToRgba(
+                          background: item.color && item.color!=="undefined" ?` linear-gradient(0deg, ${hexToRgba(
                             item.color,
                             0.35
-                          )} 20.13%, ${hexToRgba(item.color, 0.85)} 91.36%)`,
+                          )} 20.13%, ${hexToRgba(item.color, 0.85)} 91.36%)` : `${allColor[index].background && allColor[index].background}`,
                           // background: `linear-gradient(6deg, ${item.color} 20.13%, rgba(68, 175, 255, 0.85) 91.36%)`
                           // background: `${item.color}`,
                         }}
@@ -255,13 +270,14 @@ export const Lotteries = () => {
                             className="left"
                             style={{ paddingBottom: "8px", paddingTop: "8px" }}
                           >
-                            <div className="top">
+                            <div className="top" >
                               <img
+                              style={{height:"auto"}}
                                 // src={item.imageUrl ? item.imageUrl : lottoImg}
-                                src={allImages[index].img ? allImages[index].img : lottoImg }
+                                src={allImages[index] && allImages[index].img ? allImages[index].img : lottoImg }
                                 alt="chatLogo"
                                 width="140"
-                                height="58"
+                                // height="58"
                               />
                             </div>
                             <div

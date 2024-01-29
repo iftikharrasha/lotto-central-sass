@@ -86,7 +86,7 @@ export const Dashoboard = () => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/lotteries/create",
+        "https://api.lottocentral.in/dev/lotteries/create",
         formData,
         { headers: headers }
       );
@@ -109,7 +109,7 @@ export const Dashoboard = () => {
     try {
       setIsLoading(true);
       const res = await axios.get(
-        `http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/lotteries/get`
+        `https://api.lottocentral.in/dev/lotteries/get`
       );
       if (res.status === 200) {
         console.log("dataaaa", res?.data);
@@ -135,7 +135,7 @@ export const Dashoboard = () => {
       console.log("headers", headers);
 
       const res = await axios.put(
-        `http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/lotteries/delete?id=${id}`,
+        `https://api.lottocentral.in/dev/lotteries/delete?id=${id}`,
         null, // Pass null as the second parameter for PUT requests with no data
         {
           headers: headers,
@@ -185,7 +185,7 @@ export const Dashoboard = () => {
       console.log("updateLottery", formData);
 
       const res = await axios.put(
-        `http://lotto-central-alb-1507961793.ap-south-1.elb.amazonaws.com/dev/lotteries/update?id=${editId}`,
+        `https://api.lottocentral.in/dev/lotteries/update?id=${editId}`,
         formData, // Pass null as the second parameter for PUT requests with no data
         {
           headers: headers,
@@ -350,7 +350,7 @@ export const Dashoboard = () => {
                           "N/A"
                         )}
                       </td>
-                      <td>{item.expiryTime ? item.expiryTime : "N/A"}</td>
+                      <td>{item.expiryTime ?  moment.utc(item.expiryTime).format("YYYY-MM-DD hh:mm A") : "N/A"}</td>
                       <td>
                         <button
                           onClick={() => {
@@ -537,7 +537,7 @@ export const Dashoboard = () => {
                       lotteryData &&
                       lotteryData.startTime 
                       &&
-                      moment(lotteryData.startTime).format("YYYY-MM-DDTHH:mm")
+                      moment.utc(lotteryData.startTime).format("YYYY-MM-DDTHH:mm")
                     }
                     placeholder="Start Date"
                     onChange={handlechange}
@@ -554,7 +554,7 @@ export const Dashoboard = () => {
                       lotteryData &&
                       lotteryData.expiryTime 
                       &&
-                      moment(lotteryData.expiryTime).format("YYYY-MM-DDTHH:mm")
+                      moment.utc(lotteryData.expiryTime).format("YYYY-MM-DDTHH:mm")
                     }
                     placeholder="Expire Date"
                     onChange={handlechange}

@@ -15,8 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
-app.get("/public", (req, res) => {
-  res.status(200).json({ message: "Backend Running" });
+app.get("/health", (req, res) => {
+  console.log("health check");
+  res.status(200).send("up");
 });
 
 // Serve static files from the "uploads" directory
@@ -44,7 +45,7 @@ app.use("/dev", routes);
 app.use(errorHandler);
 
 // Scheduler for every night at midnight
-// lotteryScheduler.start();
+lotteryScheduler.start();
 
 app.listen(port, () => {
   logger().info(`Server is running on port ${port}`);

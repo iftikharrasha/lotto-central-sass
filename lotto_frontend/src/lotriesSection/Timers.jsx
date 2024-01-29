@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Timers(props) {
-  const startDBTime = new Date(props.startTime).getTime();
+  const endTimep = "2024-01-27T19:07:00.000Z";
   const endTime = new Date(props.endTime).getTime();
   const currentTime = new Date().getTime();
+  const utcOffset = new Date().getTimezoneOffset() * 60 * 1000;
+  // Convert current time to UTC
+  // const currentUTCTime = new Date(currentTime).toUTCString();
+  const currentTimeUTC = currentTime - utcOffset;
+  // console.log("currentTime", props.endTime, currentTimeUTC, endTime);
 
-  const timeLeft = endTime - currentTime;
+  const timeLeft = endTime - currentTimeUTC;
   const remain = Math.ceil(timeLeft / 1000);
 
   const [time, setTime] = useState(remain);

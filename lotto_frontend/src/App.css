@@ -1109,7 +1109,7 @@ main::before {
   margin: 0 1rem;
   margin-bottom: 3rem;
   position: relative;
-  z-index: 9999;
+  z-index: 1;
 }
 
 @media (max-width: 575.98px) {
