@@ -260,7 +260,7 @@ export const Lotteries = () => {
                           background: item.color && item.color!=="undefined" ?` linear-gradient(0deg, ${hexToRgba(
                             item.color,
                             0.35
-                          )} 20.13%, ${hexToRgba(item.color, 0.85)} 91.36%)` : `${allColor[index].background && allColor[index].background}`,
+                          )} 20.13%, ${hexToRgba(item.color, 0.85)} 91.36%)` : `${allColor[index] && allColor[index].background ? allColor[index].background : "linear-gradient(0deg, rgba(32, 74, 135, 0.35) 20.13%, rgba(32, 74, 135, 0.85) 91.36%)"}`,
                           // background: `linear-gradient(6deg, ${item.color} 20.13%, rgba(68, 175, 255, 0.85) 91.36%)`
                           // background: `${item.color}`,
                         }}
@@ -272,12 +272,12 @@ export const Lotteries = () => {
                           >
                             <div className="top" >
                               <img
-                              style={{height:"auto"}}
+                              // style={{height:"auto"}}
                                 // src={item.imageUrl ? item.imageUrl : lottoImg}
-                                src={allImages[index] && allImages[index].img ? allImages[index].img : lottoImg }
+                                src={item.image ? `${"https://api.lottocentral.in/dev/images/uploads/"+item.image}` : allImages[index] && allImages[index].img ? allImages[index].img : lottoImg }
                                 alt="chatLogo"
                                 width="140"
-                                // height="58"
+                                height="58"
                               />
                             </div>
                             <div
@@ -301,8 +301,8 @@ export const Lotteries = () => {
                               >
                                 {" "}
                                 <Timers
-                                  endTime={item.expiryTime}
-                                  startTime={item.startTime}
+                                  endTime={item.expiryTime && item.expiryTime}
+                                  startTime={item.startTime && item.startTime}
                                 />
                               </span>
                             </div>
@@ -315,14 +315,14 @@ export const Lotteries = () => {
                               </button>
                             </div>
                           </div>
-                          <div className="right" style={{background:`${allColor[index].color && allColor[index].color}`, color: `${allColor[index].color1 && allColor[index].color1 }`}}>
+                          <div className="right" style={{background:`${allColor[index] && allColor[index].color && allColor[index].color}`, color: `${allColor[index] && allColor[index].color1 && allColor[index].color1 }`}}>
                             <h5>
                               ₹{" "}
                               <span style={{ fontSize: "4rem" }}>
                                 {item.price ? item.price : "N/A"}
                               </span>
                             </h5>
-                            <h6>{item.priceType ? item.priceType : "N/A"}</h6>
+                            <h6>{item.priceType && item.priceType!=="undefined" ? item.priceType : "N/A"}</h6>
                           </div>
                         </div>
 
