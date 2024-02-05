@@ -4,7 +4,6 @@ import mobileImg from "../assets/img/mobile.png";
 import locationImg from "../assets/img/location.png";
 import emailImg from "../assets/img/email.png";
 import axios from "axios";
-// import toast, { Toaster } from 'react-hot-toast';
 import Swal from 'sweetalert2';
 
 export const CustomerSupport = () => {
@@ -86,7 +85,6 @@ export const CustomerSupport = () => {
 
   return (
     <section className="contact" id="contact">
-    {/* <Toaster /> */}
       {isLoading && (
         <div className="create-company-container">
           <div className="loader-container">

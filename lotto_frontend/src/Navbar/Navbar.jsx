@@ -12,6 +12,7 @@ import dashboardImg from "../assets/img/dashboard.svg";
 import { useLocation, NavLink, useNavigate } from "react-router-dom";
 import SignupModal from "../Common/SignupModal";
 import LottieAnime from "../Common/LottieAnime";
+
 export const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const location = useLocation();
@@ -47,9 +48,6 @@ export const Navbar = () => {
     <React.Fragment>
       {isLoading && (
         <div className="create-company-container">
-          {/* <div className="loader-container">
-            <div className="loader"></div>
-          </div> */}
            <LottieAnime/>
         </div>
       )}
