@@ -1404,63 +1404,6 @@ main{
         }
     }
 }
-
-// .answerText {
-//     z-index: 5;
-//     animation: fadeInDown 2s ease-out forwards;
-//     transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-//   }
-  
-//   @keyframes fadeInDown {
-//     from {
-//       max-height: 0;
-//     }
-//     to {
-//       max-height: 100px; /* Adjust this value based on your content height */
-//     }
-//   }
-//   @media (max-width: 910px) {
-//     @keyframes fadeInDown {
-//       from {
-//         max-height: 0;
-//       }
-//       to {
-//         max-height: 200px; /* Adjust this value for smaller screens */
-//       }
-//     }
-//   }
-//   @media (max-width: 670px) {
-//     @keyframes fadeInDown {
-//       from {
-//         max-height: 0;
-//       }
-//       to {
-//         max-height: 250px; /* Adjust this value for smaller screens */
-//       }
-//     }
-//   }
-//   @media (max-width: 450px) {
-//     @keyframes fadeInDown {
-//       from {
-//         max-height: 0;
-//       }
-//       to {
-//         max-height: 300px; /* Adjust this value for smaller screens */
-//       }
-//     }
-//   }
-//   .open .answerText {
-//     animation: fadeOutUp 2s ease-out forwards;
-//   }
-  
-//   @keyframes fadeOutUp {
-//     from {
-//       max-height: 100px; /* Adjust this value based on your content height */
-//     }
-//     to {
-//       max-height: 0;
-//     }
-//   }
   
   .create-company-container {
     display: flex;
@@ -1677,3 +1620,33 @@ main{
   #check:checked ~ .button:after {
     width: 100%;
   }
+
+  .d-none {
+    display: none!important;
+   }
+
+   .d-block {
+     display: block!important;
+   }
+
+    @media (min-width: 768px) {
+        .d-md-block {
+            display: block!important;
+        }
+        .d-md-none {
+            display: none!important;
+        }
+    }
+
+    @media (min-width: 1200px){
+        .d-xl-none {
+            display: none!important;
+        }
+        .d-xl-block {
+            display: block!important;
+        }
+    }
+
+    .py-4 {
+        padding: 1.5rem 0!important;
+    }

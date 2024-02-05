@@ -34,7 +34,7 @@ export const Footer = () => {
         <div className="footer__links">
           <div className="social-icons">
            <div className="copyright">
-              <h6> © 2023 lottocentral</h6>
+              <h6> © 2024 lottocentral</h6>
               <ul>
                   <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"><a href="#" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt="facebook" width="24px" height="24px"/></a></li>
                   <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="650" data-aos-duration="1000" data-aos-offset="0"><a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokImg} alt="tiktok" width="24px" height="24px"/></a></li>

@@ -5,6 +5,7 @@ import locationImg from "../assets/img/location.png";
 import emailImg from "../assets/img/email.png";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import LottieAnime from "../Common/LottieAnime";
 
 export const CustomerSupport = () => {
   const [formdata, setFormData] = useState(null);
@@ -87,9 +88,7 @@ export const CustomerSupport = () => {
     <section className="contact" id="contact">
       {isLoading && (
         <div className="create-company-container">
-          <div className="loader-container">
-            <div className="loader"></div>
-          </div>
+          <LottieAnime/>
         </div>
       )}
       <div className="container">
