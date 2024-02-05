@@ -3,7 +3,6 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Home } from "../Home/Home";
 import { Login } from "../Admin/Login/Login";
 import { Dashoboard } from "../Admin/Dashboard/Dashoboard";
-import "../App.css";
 
 export const MainRoutes = () => {
   const navigate = useNavigate();

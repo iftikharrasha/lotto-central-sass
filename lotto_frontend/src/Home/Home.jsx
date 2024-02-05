@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 
 import { HeroSection } from "../heroSection/HeroSection";
 import { Lotteries } from "../lotriesSection/Lotteries";

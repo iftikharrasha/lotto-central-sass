@@ -1,0 +1,35 @@
+$white: #FFFFFF;
+$offwhite: #FFF2EA;
+$blue: #0E0C31;
+$yellow: #FBD852;
+$pink: #F631BA;
+$green: #00802A;
+$black: #131313;
+
+$font1: 'Comfortaa', sans-serif;
+$font2: 'Barlow', sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin bgCover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin fontMaker($family, $size, $weight, $lineHeight) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}

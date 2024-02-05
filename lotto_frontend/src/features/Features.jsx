@@ -3,7 +3,6 @@ import accessImg from "../assets/img/access.png";
 import secureImg from "../assets/img/secure.png";
 import winsImg from "../assets/img/wins.png";
 import tailoredImg from "../assets/img/tailored.png";
-import "../App.css";
 export const Features = () => {
   return (
     <section className="features">

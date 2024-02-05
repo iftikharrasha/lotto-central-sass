@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import contactImg from "../../assets/img/contact.png";
-import "../../App.css";
 import toast, { Toaster } from 'react-hot-toast';
 
 export const Login = () => {
@@ -68,16 +67,9 @@ export const Login = () => {
         </div>
       </div>
     )}
-      <section
-        className="contact marginTop"
-        id="contact"
-        style={{ marginBottom: "10rem" }}
-      >
+      <section className="contact">
         <div className="container">
-          <div
-            className="contact__contents"
-            style={{ display: "flex", justifyContent: "center" }}
-          >
+          <div className="contact__contents">
             <div className="contact__contents__below">
               <div className="contact__contents__left">
                 <h6

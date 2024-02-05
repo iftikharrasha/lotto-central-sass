@@ -35,29 +35,25 @@ export const FaqSection = () => {
   ];
 
   const [faqs, setFaqs] = useState(faqSection);
-  const [show, setShow] = useState(false);
 
   const handleClick = (id) => {
-    console.log("id on click", id);
-    faqs.map((item) => {
-      if (item.id === id) {
-        if (item.show === true) {
-          item.show = false;
-          // setMessageModal(false);
+    setFaqs((prevFaqs) => 
+      prevFaqs.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            show: !item.show,
+          };
         } else {
-          item.show = true;
-          console.log("here in hidden false", id, item.id);
-          // setMessageModal(true);
+          return {
+            ...item,
+            show: false,
+          };
         }
-
-        setShow(!show);
-      }
-      // else {
-      //   item.show = false;
-      // }
-    });
-    setFaqs(faqs);
+      })
+    );
   };
+  
 
   return (
     <section className="faq" id="faq">
@@ -84,29 +80,18 @@ export const FaqSection = () => {
                 faqs.map((item, index) => (
                 <li
                   key={index}
-                  className="accordions__item"
-                  style={{
-                    // background:
-                    //   "linear-gradient(40deg, rgba(161, 198, 221, 0.5), rgba(161, 198, 221, 0.225))",
-                    background: "linear-gradient(40deg, rgba(161, 198, 221, 0.5), rgba(161, 198, 221, 0.225))",
-                    borderRadius: "10px",
-                    // borderBottomLeftRadius:`${item.show ? "" :"10px"}`,
-                    // borderBottomRightRadius:`${item.show ? "" :"10px"}`,
-                    height:"auto",
-                  }}
+                  className={`accordions__item ${item.show ? "open" : ""}`}
                   onClick={()=>{
                     handleClick(item.id)
                   }}
                 >
-                  <button className={`accordions__control ${item.show ? "open" : ""}`} style={{borderRadius:"10px", borderBottomLeftRadius:`${item.show ? "0px" :"10px"}`, borderBottomRightRadius:`${item.show ? "0px" :"10px"}`}} aria-expanded="true">
+                  <button className="accordions__control" aria-expanded="false">
                     <span className="accordions__title">{item.question}</span>
                     <span className="accordions__icon"></span>
                   </button>
-                  {item.show && (
-                    <div className="answerText" style={{}} >
-                      <p style={{padding:"1rem"}}>{item.answer}</p>
-                    </div>
-                  )}
+                  <div className="accordions__text" aria-hidden="true">
+                    <p>{item.answer}</p>
+                  </div>
                 </li>
               ))}
           </ul>
