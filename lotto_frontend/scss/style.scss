@@ -378,37 +378,6 @@ main{
     @media (max-width: 991.98px) {
         padding: 8rem 0 0 0;
     }
-    // &:before {
-    //     content: "";
-    //     position: absolute;
-    //     border-radius: 16.75rem;
-    //     background: linear-gradient(-45deg,#1b1a43 5%,#122e47);
-    //     top: calc(100% - 1.25rem);
-    //     left: 0;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     width: 35rem;
-    //     height: 35rem;
-    //     filter: blur(5rem);
-    //     z-index: -1;
-    //     @media (max-width: 575.98px) {
-    //         width: 20rem;
-    //         height: 20rem;
-    //         top: calc(80% - 1.25rem);
-    //         border-radius: 5rem;
-    //     }
-    //     @media (min-width: 576px) and (max-width: 991.98px) {
-    //         width: 20rem;
-    //         height: 20rem;
-    //         top: calc(80% - 1.25rem);
-    //         border-radius: 10rem;
-    //     }
-    //     @media (min-width: 992px) and (max-width: 1299.98px) {
-    //         width: 20rem;
-    //         height: 20rem;
-    //         top: calc(80% - 1.25rem);
-    //     }
-    // }
     &__content{
         @include flexBetween;
         @media (max-width: 575.98px) {
@@ -511,45 +480,7 @@ main{
     &__content {
         padding: 1rem 0 2rem 0;
         position: relative;
-        // &::after {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     width: 5rem;
-        //     background: linear-gradient(270deg, #30496b 0.9%, rgba(20, 55, 98, 0));
-        //     z-index: 2;
-        // }
         &__slider{
-            // .controls {
-            //     display: block;
-            //     position: absolute;
-            //     right: 1.25rem;
-            //     top: 50%;
-            //     transform: translateY(-50%);
-            //     z-index: 999;
-            //     button{
-            //         img {
-            //             width: 0.4825rem;
-            //             height: auto;
-            //         }
-            //     }
-            //     &__prev {
-            //         margin-bottom: 0.5rem;
-            //         button {
-            //             img {
-            //                 transform: rotate(180deg);
-            //             }
-            //         }
-            //     }
-            //     &__next {
-            //         margin-top: 0.5rem;
-            //     }
-            //     .swiper-button-disabled {
-            //         opacity: 0.25;
-            //     }
-            // }
             .gallerySlider{
                 .swiper-wrapper{
                     display: grid;
@@ -1482,35 +1413,114 @@ main{
   }
   
   .ReactModal__Overlay {
-    background: rgba(0,0,0,.4) !important;
+    background: rgba(0,0,0,.5) !important;
     z-index: 999;
   }
 
   .ReactModal__Content{
     border: none !important;
-    box-shadow: 0.2rem 0.2rem 0.8rem 0.2rem rgba(161, 181, 223, 0.6), -0.2rem -0.2rem 0.8rem 0.2rem rgba(255, 255, 255, 1);
-    @media (max-width: 990.98px) {
-        width: 60% !important;
-    }
+    box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(161, 181, 223, 0), -0.1rem 0rem 0.8rem 0.1rem #cea654;
+    background: $blue !important;
+    color: $white !important;
+    border-radius: 0 !important;
+    text-align: center;
+    overflow: hidden !important;;
+    // background-image: linear-gradient(to bottom right,#FFEEA4 ,#776427) !important;
+    // background-image: linear-gradient(to top right,$blue ,#927a2b) !important;
+    // background-image: linear-gradient(to bottom right,#FFEEA4 ,$blue) !important;
     @media (max-width: 575.98px) {
         width: 80% !important;
     }
-  }
-
-  .swal2-popup{
-    background: $white;
+    @media (min-width: 576px) and (max-width: 991.98px) {
+        width: 50% !important;
+    }
+    @media (min-width: 992px) and (max-width: 1299.98px) { 
+        width: 40% !important;
+    }
+    @media (min-width: 1300px) and (max-width: 1531.98px){ 
+    }
+    @media (min-width: 1532px) and (max-width: 1698.99px) {
+    }
+    img, h2, p{
+        position: relative;
+        z-index: 8;
+    }
+    img{
+        width: 6.25rem;
+        height: auto;
+        padding-bottom: 1.5rem;
+    }
+    h2{
+        color: $pink;
+        font-family: $font1;
+    }
+    p{
+        color: #d5e9f6;
+        font-size: 0.85rem;
+    
+    }
     &:before {
         content: "";
         position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 62.5rem rgba(255, 255, 255, .2);
-        filter: blur(0.1875rem);
-        margin: -1.25rem;
+        inset: 0;
+        background: conic-gradient(
+          transparent 0deg,
+          rgba(143, 168, 255, 0.2) 100deg,
+          transparent 150deg,
+          transparent 230deg,
+          rgba(191, 122, 0, 0.75) 250deg,
+          $gold 280deg,
+          #f1cb69 280deg,
+          $gold 300deg,
+          rgba(191, 122, 0, 0.75) 310deg,
+          transparent 360deg
+        );
+        transform: scaleX(4) scaleY(2) rotate(0deg);
+        transition: 1s transform;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        inset: 0.2rem;
+        background-color: $blue;
+      }
+      &:hover{
+        &:before {
+            transform: scaleX(4) scaleY(2) rotate(-360deg);
+        }
+      }
+  }
+
+  .swal2-popup{
+    background: $blue !important;
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     background: inherit;
+    //     z-index: -1;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     box-shadow: inset 0 0 62.5rem rgba(255, 255, 255, .2);
+    //     filter: blur(0.1875rem);
+    //     margin: -1.25rem;
+    // }
+    color: $white !important;
+    border-radius: 0 !important;
+    text-align: center;
+    @media (max-width: 575.98px) {
+        width: 80% !important;
+    }
+    @media (min-width: 576px) and (max-width: 991.98px) {
+        width: 50% !important;
+    }
+    @media (min-width: 992px) and (max-width: 1299.98px) { 
+        width: 40% !important;
+    }
+    @media (min-width: 1300px) and (max-width: 1531.98px){ 
+    }
+    @media (min-width: 1532px) and (max-width: 1698.99px) {
     }
   }
 
@@ -1530,6 +1540,11 @@ main{
     line-height: 1.5rem;
     color: $pink;
     text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  .message{
+    padding: 0.5rem 3rem 0 3rem;
   }
 
   .input-field {
@@ -1545,12 +1560,13 @@ main{
     width: 100%;
     z-index: 1;
     font-size: 1.25rem;
-    color: #899bc4cc;
+    color: $gold;
     border: none;
     outline: none;
     // background: #1e2d48;
-    border-bottom: 1px solid #899bc4cc;
+    border-bottom: 1px solid $gold;
     padding: 1.25rem 0 0 0;
+    background: rgba(0, 0, 0, 0);
   }
   .inner-text {
     position: absolute;
@@ -1560,14 +1576,14 @@ main{
     display: block;
     line-height: 3.75rem;
     font-size: 1.5rem;
-    color: #899bc4cc;
+    color: $gold;
     pointer-events: none;
     transition: all 0.4s;
   }
   input.email:focus ~ .inner-text,
   input.email:valid ~ .inner-text {
     transform: translateY(-1.25rem);
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .button{
     position: absolute;
@@ -1582,14 +1598,17 @@ main{
     cursor: pointer;
     border: 0;
     transition: 0.5s;
-    color: #dbe2f0;
-    background: rgba(161, 181, 223, 0.8);
+    font-family: $font1;
+    color: $black;
+    font-weight: 700;
+    opacity: 0.5;
     @media (max-width: 575.98px) {
         width: 6rem;
     }
   }
 .send{
-    background: $blue;
+    background: $yellow;
+    opacity: 1;
 }
 
   input.email:focus ~ .button:before,
@@ -1603,7 +1622,7 @@ main{
     @include flexCenter;
   }
   input.email:valid ~ .button:before {
-    color: #d5e9f6;
+    color: #d5e9f6 !important;
     background: $blue;
   }
   #check {

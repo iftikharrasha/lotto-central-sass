@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import coinImg from "../assets/img/coins.png";
 import { useLocation } from "react-router-dom";
 import SignupModal from '../Common/SignupModal';
-import LottieAnime from "../Common/LottieAnime";
 
 export const HeroSection = () => {
   const location = useLocation();
@@ -20,7 +19,9 @@ export const HeroSection = () => {
     <section className="hero" id="home">
     {isLoading && (
       <div className="create-company-container">
-        <LottieAnime/>
+        <div className="loader-container">
+          <div className="loader"></div>
+        </div>
       </div>
     )}
     <div className="container">

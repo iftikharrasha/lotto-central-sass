@@ -4,12 +4,21 @@ import mobileImg from "../assets/img/mobile.png";
 import locationImg from "../assets/img/location.png";
 import emailImg from "../assets/img/email.png";
 import axios from "axios";
-import Swal from 'sweetalert2';
-import LottieAnime from "../Common/LottieAnime";
+import ContactModal from "../Common/ContactModal";
 
 export const CustomerSupport = () => {
   const [formdata, setFormData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [messagePop, setMessagePop] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => {
+    setOpen(true);
+  };
+  const onCloseModal = () => {
+    setOpen(false);
+  };
 
   const handlechange = (e) => {
     e.preventDefault();
@@ -23,6 +32,8 @@ export const CustomerSupport = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
     let payload = {
       name: formdata && formdata.name,
       email: formdata && formdata.email,
@@ -31,51 +42,34 @@ export const CustomerSupport = () => {
 
     console.log("lotteryData", formdata);
     if (!formdata || !formdata.name || !formdata.email || !formdata.message) {
-      Swal.fire({
-        title: 'Ah Snap!',
-        text: 'Please fillup the form first.',
-        icon: 'error',
-        customClass: 'popUp-error',
-        timer: 7000,
-        timerProgressBar: true,
-        showCancelButton: false,
-        showConfirmButton: false,
-      });
+        setIsLoading(false);
+        onOpenModal();
+        setMessagePop({
+          title: 'Oops!',
+          desc: `Please fill out the fields.`,
+        })
     } else {
       try {
-        setIsLoading(true);
         const response = await axios.post(
           "https://api.lottocentral.in/dev/contact/us/submit",
           payload
         );
-        console.log("payloadpayload", payload);
         if (response.status === 200 || response.status === 201) {
-          // toast.success("Successfully send feedback!");
-            Swal.fire({
-              title: 'Speak Soon!',
-              text: `We've received your email request. Will contact you back within 24 hours, Thank you!`,
-              icon: "success",
-              customClass: 'popUp-success',
-              timer: 7000,
-              timerProgressBar: true,
-              showCancelButton: false,
-              showConfirmButton: false,
-          }).then((result) => {
-              if (result.dismiss === Swal.DismissReason.timer) {
-                console.log("I was closed by the timer");
-              }
-              if (result.isConfirmed || result.isDismissed || result.isDenied) {
-                console.log("I was closed by clicked outside");
-              }
+          setIsLoading(false);
+          onOpenModal();
+          setMessagePop({
+              title: 'Thank you for contacting us!',
+              desc: `We've received your inquiry. We'll get back to you shortly.`,
           })
         }
-        setIsLoading(false);
       } catch (error) {
         setIsLoading(false);
-        console.error("An error occurred:", error.response.data.message);
-        // setEmptyInput(error.response.data.message);
+        onOpenModal();
+        setMessagePop({
+            title: 'Oops!',
+            desc: `Something went wrong in the server, please try again later.`,
+        })
       }
-      // e.reset();
       setFormData({
         name: "",
         email: "",
@@ -87,9 +81,11 @@ export const CustomerSupport = () => {
   return (
     <section className="contact" id="contact">
       {isLoading && (
-        <div className="create-company-container">
-          <LottieAnime/>
-        </div>
+          <div className="create-company-container">
+            <div className="loader-container">
+              <div className="loader"></div>
+            </div>
+          </div>
       )}
       <div className="container">
         <div className="contact__contents">
@@ -249,6 +245,16 @@ export const CustomerSupport = () => {
           </div>
         </div>
       </div>
+
+      {open && (
+        <ContactModal
+          open={open}
+          error={error}
+          messagePop={messagePop}
+          onCloseModal={onCloseModal}
+          setIsLoading={setIsLoading}
+        />
+      )}
     </section>
   );
 };

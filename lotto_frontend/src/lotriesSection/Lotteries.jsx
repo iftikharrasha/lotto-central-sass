@@ -12,7 +12,6 @@ import megaLotoImg7 from "../assets/img/lootry/saturday_lotto.webp";
 import axios from "axios";
 import Timers from "./Timers";
 import SignupModal from "../Common/SignupModal";
-import LottieAnime from "../Common/LottieAnime";
 
 export const Lotteries = () => {
   const initialDisplayCount = 3; // Initial number of items to display
@@ -154,7 +153,9 @@ export const Lotteries = () => {
       <section className="gallery" id="lottery">
         {isLoading && (
           <div className="create-company-container">
-            <LottieAnime/>
+            <div className="loader-container">
+              <div className="loader"></div>
+            </div>
           </div>
         )}
         <div className="container">

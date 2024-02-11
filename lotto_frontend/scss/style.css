@@ -2192,20 +2192,19 @@ main::before {
 }
 
 .ReactModal__Overlay {
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   z-index: 999;
 }
 
 .ReactModal__Content {
   border: none !important;
-  -webkit-box-shadow: 0.2rem 0.2rem 0.8rem 0.2rem rgba(161, 181, 223, 0.6), -0.2rem -0.2rem 0.8rem 0.2rem white;
-          box-shadow: 0.2rem 0.2rem 0.8rem 0.2rem rgba(161, 181, 223, 0.6), -0.2rem -0.2rem 0.8rem 0.2rem white;
-}
-
-@media (max-width: 990.98px) {
-  .ReactModal__Content {
-    width: 60% !important;
-  }
+  -webkit-box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(161, 181, 223, 0), -0.1rem 0rem 0.8rem 0.1rem #cea654;
+          box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem rgba(161, 181, 223, 0), -0.1rem 0rem 0.8rem 0.1rem #cea654;
+  background: #0E0C31 !important;
+  color: #FFFFFF !important;
+  border-radius: 0 !important;
+  text-align: center;
+  overflow: hidden !important;
 }
 
 @media (max-width: 575.98px) {
@@ -2214,24 +2213,87 @@ main::before {
   }
 }
 
-.swal2-popup {
-  background: #FFFFFF;
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .ReactModal__Content {
+    width: 50% !important;
+  }
 }
 
-.swal2-popup:before {
+@media (min-width: 992px) and (max-width: 1299.98px) {
+  .ReactModal__Content {
+    width: 40% !important;
+  }
+}
+
+.ReactModal__Content img, .ReactModal__Content h2, .ReactModal__Content p {
+  position: relative;
+  z-index: 8;
+}
+
+.ReactModal__Content img {
+  width: 6.25rem;
+  height: auto;
+  padding-bottom: 1.5rem;
+}
+
+.ReactModal__Content h2 {
+  color: #F631BA;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.ReactModal__Content p {
+  color: #d5e9f6;
+  font-size: 0.85rem;
+}
+
+.ReactModal__Content:before {
   content: "";
   position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-box-shadow: inset 0 0 62.5rem rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 0 62.5rem rgba(255, 255, 255, 0.2);
-  -webkit-filter: blur(0.1875rem);
-          filter: blur(0.1875rem);
-  margin: -1.25rem;
+  inset: 0;
+  background: conic-gradient(transparent 0deg, rgba(143, 168, 255, 0.2) 100deg, transparent 150deg, transparent 230deg, rgba(191, 122, 0, 0.75) 250deg, rgba(242, 187, 90, 0.9) 280deg, #f1cb69 280deg, rgba(242, 187, 90, 0.9) 300deg, rgba(191, 122, 0, 0.75) 310deg, transparent 360deg);
+  -webkit-transform: scaleX(4) scaleY(2) rotate(0deg);
+          transform: scaleX(4) scaleY(2) rotate(0deg);
+  -webkit-transition: 1s -webkit-transform;
+  transition: 1s -webkit-transform;
+  transition: 1s transform;
+  transition: 1s transform, 1s -webkit-transform;
+}
+
+.ReactModal__Content:after {
+  content: "";
+  position: absolute;
+  inset: 0.2rem;
+  background-color: #0E0C31;
+}
+
+.ReactModal__Content:hover:before {
+  -webkit-transform: scaleX(4) scaleY(2) rotate(-360deg);
+          transform: scaleX(4) scaleY(2) rotate(-360deg);
+}
+
+.swal2-popup {
+  background: #0E0C31 !important;
+  color: #FFFFFF !important;
+  border-radius: 0 !important;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .swal2-popup {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .swal2-popup {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1299.98px) {
+  .swal2-popup {
+    width: 40% !important;
+  }
 }
 
 .swal2-html-container {
@@ -2250,6 +2312,12 @@ main::before {
   line-height: 1.5rem;
   color: #F631BA;
   text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.message {
+  padding: 0.5rem 3rem 0 3rem;
 }
 
 .input-field {
@@ -2266,11 +2334,12 @@ input.email {
   width: 100%;
   z-index: 1;
   font-size: 1.25rem;
-  color: #899bc4cc;
+  color: rgba(242, 187, 90, 0.9);
   border: none;
   outline: none;
-  border-bottom: 1px solid #899bc4cc;
+  border-bottom: 1px solid rgba(242, 187, 90, 0.9);
   padding: 1.25rem 0 0 0;
+  background: rgba(0, 0, 0, 0);
 }
 
 .inner-text {
@@ -2281,7 +2350,7 @@ input.email {
   display: block;
   line-height: 3.75rem;
   font-size: 1.5rem;
-  color: #899bc4cc;
+  color: rgba(242, 187, 90, 0.9);
   pointer-events: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -2291,7 +2360,7 @@ input.email:focus ~ .inner-text,
 input.email:valid ~ .inner-text {
   -webkit-transform: translateY(-1.25rem);
           transform: translateY(-1.25rem);
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .button {
@@ -2308,8 +2377,10 @@ input.email:valid ~ .inner-text {
   border: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #dbe2f0;
-  background: rgba(161, 181, 223, 0.8);
+  font-family: "Comfortaa", sans-serif;
+  color: #131313;
+  font-weight: 700;
+  opacity: 0.5;
 }
 
 @media (max-width: 575.98px) {
@@ -2319,7 +2390,8 @@ input.email:valid ~ .inner-text {
 }
 
 .send {
-  background: #0E0C31;
+  background: #FBD852;
+  opacity: 1;
 }
 
 input.email:focus ~ .button:before,
@@ -2351,7 +2423,7 @@ input.email:invalid ~ .button:before {
 }
 
 input.email:valid ~ .button:before {
-  color: #d5e9f6;
+  color: #d5e9f6 !important;
   background: #0E0C31;
 }
 

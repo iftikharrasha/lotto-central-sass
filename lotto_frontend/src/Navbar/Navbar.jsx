@@ -11,7 +11,6 @@ import tiktokImg from "../assets/img/tiktok.svg";
 import dashboardImg from "../assets/img/dashboard.svg";
 import { useLocation, NavLink, useNavigate } from "react-router-dom";
 import SignupModal from "../Common/SignupModal";
-import LottieAnime from "../Common/LottieAnime";
 
 export const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -48,7 +47,9 @@ export const Navbar = () => {
     <React.Fragment>
       {isLoading && (
         <div className="create-company-container">
-           <LottieAnime/>
+          <div className="loader-container">
+            <div className="loader"></div>
+          </div>
         </div>
       )}
       <header className={scroll ? "header sticky" : "header"} id="header">
