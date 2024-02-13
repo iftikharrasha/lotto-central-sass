@@ -2303,7 +2303,6 @@ main::before {
 .center {
   position: relative;
   width: 31.25rem;
-  border-radius: 0.375rem;
 }
 
 .error {
@@ -2317,7 +2316,7 @@ main::before {
 }
 
 .message {
-  padding: 0.5rem 3rem 0 3rem;
+  padding: 0.5rem 0 0 0;
 }
 
 .input-field {
@@ -2368,9 +2367,7 @@ input.email:valid ~ .inner-text {
   top: 0;
   right: 0;
   z-index: 2;
-  width: 7.5rem;
-  height: 3.75rem;
-  font-size: 1.5625rem;
+  font-size: 1.125rem;
   line-height: 3.75rem;
   border-radius: 0.375rem;
   cursor: pointer;
@@ -2381,16 +2378,30 @@ input.email:valid ~ .inner-text {
   color: #131313;
   font-weight: 700;
   opacity: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.button img {
+  width: 2.625rem;
+  height: auto;
 }
 
 @media (max-width: 575.98px) {
-  .button {
-    width: 6rem;
+  .button img {
+    width: 2rem;
   }
 }
 
 .send {
-  background: #FBD852;
   opacity: 1;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import message from "../../src/assets/img/message.svg";
+import send from "../../src/assets/img/send.svg";
 import Modal from "react-modal";
 import axios from 'axios';
 
@@ -43,8 +44,9 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                 setIsLoading(false);
                 setEmailSent(true);
                 setMessagePop({
-                    title: 'Welcome abroad, lucky one!',
-                    desc: `Keep an eye on your email for launch.`,
+                    title: 'Welcome aboard, lucky one!',
+                    desc1: `Keep an eye on your email for launch undates.`,
+                    desc2: null,
                 })
             }
             console.log("responseresponse", response);
@@ -54,7 +56,8 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                 setEmailSent(true);
                 setMessagePop({
                     title: 'Oops!',
-                    desc: `It seems you're already on our list. Keep an eye on your email for future.`,
+                    desc1: `It seems you're already on our list.`,
+                    desc2: `Keep an eye on your email for launch undates.`,
                 })
             }
             console.error("An error occurred:", error.response);
@@ -72,7 +75,7 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                 {
                     !emailSent ?
                     <>
-                        <h2>SIGNUP NOW</h2>
+                        <h2>SIGN UP</h2>
                         <form>
                             <div
                             className="fields"
@@ -109,10 +112,10 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                                         email === null ? null :
                                         error ? 
                                         <button className="button" style={{pointerEvents: "none"}}>
-                                            Send
+                                            <img src={send} alt="send" width={42} height={42}/>
                                         </button> : 
                                         <button type="submit" className="button send" onClick={(e) => handleClick(e)}>
-                                            Send
+                                            <img src={send} alt="send" width={42} height={42}/>
                                         </button>
                                     }
                                     </div>
@@ -132,7 +135,7 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                     </> :
                     <>
                         <h2>{messagePop.title}</h2>
-                        <p className='error message'>{messagePop.desc}</p>
+                        <p className='error message'>{messagePop.desc1} <br />{messagePop.desc2}</p>
                     </>
                 }
                 

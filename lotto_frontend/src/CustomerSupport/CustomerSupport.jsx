@@ -46,7 +46,8 @@ export const CustomerSupport = () => {
         onOpenModal();
         setMessagePop({
           title: 'Oops!',
-          desc: `Please fill out the fields.`,
+          desc1: `Please fill out all the fields.`,
+          desc2: null,
         })
     } else {
       try {
@@ -59,7 +60,8 @@ export const CustomerSupport = () => {
           onOpenModal();
           setMessagePop({
               title: 'Thank you for contacting us!',
-              desc: `We've received your inquiry. We'll get back to you shortly.`,
+              desc1: `We've received your inquiry.`,
+              desc2: `We'll get back to you shortly.`,
           })
         }
       } catch (error) {
@@ -67,7 +69,8 @@ export const CustomerSupport = () => {
         onOpenModal();
         setMessagePop({
             title: 'Oops!',
-            desc: `Something went wrong in the server, please try again later.`,
+            desc1: `Something went wrong in the server,`,
+            desc2: `please try again later.`,
         })
       }
       setFormData({
@@ -191,7 +194,7 @@ export const CustomerSupport = () => {
                 data-aos-duration="1000"
                 data-aos-offset="0"
               />
-              <ul className="d-md-block d-none">
+              {/* <ul className="d-md-block d-none">
                 <li>
                   <span
                     data-aos="fade-zoom-in"
@@ -240,7 +243,7 @@ export const CustomerSupport = () => {
                     info@lottocentral.com
                   </span>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

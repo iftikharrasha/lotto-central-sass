@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import message from "../../src/assets/img/message.svg";
+import contact from "../../src/assets/img/contact.svg";
 import Modal from "react-modal";
 import axios from 'axios';
 
@@ -29,9 +29,9 @@ const ContactModal = ({open, onCloseModal, error, messagePop}) => {
             style={customStyles}
         >
             <div style={{ padding: "1rem" }}>
-                <img src={message} alt="message" width="100" height="92.5"/>
+                <img src={contact} alt="message" width="100" height="92.5"/>
                 <h2>{messagePop.title}</h2>
-                <p className='error message'>{messagePop.desc}</p>
+                <p className='error message'>{messagePop.desc1} <br />{messagePop.desc2}</p>
             </div>
         </Modal>
     );
