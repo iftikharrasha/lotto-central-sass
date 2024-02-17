@@ -34,11 +34,11 @@ export const Footer = () => {
         <div className="footer__links">
           <div className="social-icons">
            <div className="copyright">
-              <h6> © 2024 lottocentral</h6>
+              <h6> ©2024 lottocentral.in</h6>
               <ul>
-                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"><a href="#" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt="facebook" width="24px" height="24px"/></a></li>
-                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="650" data-aos-duration="1000" data-aos-offset="0"><a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokImg} alt="tiktok" width="24px" height="24px"/></a></li>
-                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="0"><a href="#" target="_blank" rel="noopener noreferrer"><img src={instaImg} alt="instagram" width="24px" height="24px"/></a></li>
+                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"><a href="https://www.facebook.com/lottocentral.in" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt="facebook" width="24px" height="24px"/></a></li>
+                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="650" data-aos-duration="1000" data-aos-offset="0"><a href="https://www.tiktok.com/@lottocentral" target="_blank" rel="noopener noreferrer"><img src={tiktokImg} alt="tiktok" width="24px" height="24px"/></a></li>
+                  <li data-aos="fade-zoom-in" data-aos-easing="fade-up" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="0"><a href="https://www.instagram.com/lottocentral" target="_blank" rel="noopener noreferrer"><img src={instaImg} alt="instagram" width="24px" height="24px"/></a></li>
               </ul>
            </div>
            <p>By using lottocentral.in, you are acknowledging your understanding of and agreement to these responsible gaming principles. We believe in shared responsibility, and together, we can ensure that online gaming remains a positive and enjoyable experience for all.</p>

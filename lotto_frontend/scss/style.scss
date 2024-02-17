@@ -132,8 +132,8 @@ main{
         padding-right: 5rem !important;
     }
     @media (min-width: 1300px) and (max-width: 1531.98px){ 
-        padding-left: 8rem !important;
-        padding-right: 8rem !important;
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
     }
     @media (min-width: 1532px) and (max-width: 1698.99px) {
         padding-left: 12rem !important;
@@ -546,7 +546,8 @@ main{
                         // align-items: flex-start;
                         h4 {
                             padding-top: 0.5rem;
-                            @include fontMaker($font1, 1.125rem, 700, 1.75rem);
+                            // @include fontMaker($font1, 1.125rem, 700, 1.75rem);
+                            @include fontMaker($font2, 1.125rem, 400, 1.75rem);
                             @media (min-width: 992px) and (max-width: 1299.98px) { 
                                 font-size: 1rem;
                             }
@@ -555,7 +556,7 @@ main{
                             }
                         }
                         h5 {
-                            @include fontMaker($font2, 1rem, 700, 1.75rem);
+                            @include fontMaker($font2, 1.125rem, 700, 1.75rem);
                         }
                         .left{
                             @include flexCenter;
@@ -621,19 +622,11 @@ main{
             }
         }
     }
-    .green{
+    .yellow{
         background: linear-gradient(17deg, rgba(11, 115, 56, 0.75) 14.33%, rgba(168, 255, 121, 0.85) 80.95%);
         .right{
             background: linear-gradient(180deg, #FEE600 0%, #F39900 100%);
             color: $green;
-        }
-    }
-
-    .blue{
-        background: linear-gradient(6deg, rgba(0, 87, 153, 0.75) 20.13%, rgba(68, 175, 255, 0.85) 91.36%);
-        .right{
-            background: linear-gradient(180deg, #F13E39 0%, #870000 100%);
-            color: $white;
         }
     }
 
@@ -1079,7 +1072,7 @@ main{
             }
             .open .accordions__text {
                 padding-bottom: 2rem;
-                max-height: 5.5rem;
+                max-height: 7rem;
                 @media (max-width: 991.98px) {
                     padding-bottom: 1.25rem;
                 }
@@ -1531,6 +1524,7 @@ main{
   .center {
     position: relative;
     width: 31.25rem;
+    border-radius: 0 !important;
   }
 
   .error{
@@ -1551,6 +1545,7 @@ main{
     width: 100%;
     position: relative;
     font-family: $font1;
+    border-radius: 0 !important;
   }
   input.email {
     position: absolute;
@@ -1566,6 +1561,7 @@ main{
     border-bottom: 1px solid $gold;
     padding: 1.25rem 0 0 0;
     background: rgba(0, 0, 0, 0);
+    border-radius: 0 !important;
   }
   .inner-text {
     position: absolute;
@@ -1578,15 +1574,17 @@ main{
     color: $gold;
     pointer-events: none;
     transition: all 0.4s;
+    border-radius: 0 !important;
   }
   input.email:focus ~ .inner-text,
   input.email:valid ~ .inner-text {
     transform: translateY(-1.25rem);
     font-size: 0.85rem;
+    border-radius: 0 !important;
   }
   .button{
     position: absolute;
-    top: 0;
+    // top: 0;
     right: 0;
     z-index: 2;
     // width: 5rem;
@@ -1603,6 +1601,9 @@ main{
     opacity: 0.5;
     @include flexCenter;
     background: rgba(0, 0, 0, 0);
+    @media (max-width: 575.98px) {
+        top: 0.75rem;
+    }
     img{
         width: 2.625rem;
         height: auto;
@@ -1621,14 +1622,17 @@ main{
     opacity: 1;
     pointer-events: auto;
     @include flexCenter;
+    border-radius: 0 !important;
   }
   input.email:invalid ~ .button:before {
     pointer-events: none;
     @include flexCenter;
+    border-radius: 0 !important;
   }
   input.email:valid ~ .button:before {
     color: #d5e9f6 !important;
     background: $blue;
+    border-radius: 0 !important;
   }
   #check {
     display: none;

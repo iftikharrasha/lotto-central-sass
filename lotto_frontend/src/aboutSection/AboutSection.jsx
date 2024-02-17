@@ -24,16 +24,16 @@ export const AboutSection = () => {
                       </div>
                   </div>
               </div>
-              <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0">
+              <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
                 <div className="about__contents__left__img__flip">
                     <div className="front">
-                        <img src={girl2Img} alt="girl2" width="195px" height="210px"/>
+                        <img src={guy2Img} alt="guy2" width="195px" height="210px"/>
                     </div>
                     <div className="back">
                       <img src={backlogoImg} alt="backlogo" width="112.23px" height="132.77px"/>
                     </div>
                 </div>
-              </div>
+            </div>
               <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="1000" data-aos-offset="0">
                 <div className="about__contents__left__img__flip">
                     <div className="front">
@@ -54,16 +54,16 @@ export const AboutSection = () => {
                     </div>
                 </div>
               </div>
-              <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0">
+              <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0">
                 <div className="about__contents__left__img__flip">
                     <div className="front">
-                        <img src={guy2Img} alt="guy2" width="195px" height="210px"/>
+                        <img src={girl2Img} alt="girl2" width="195px" height="210px"/>
                     </div>
                     <div className="back">
                       <img src={backlogoImg} alt="backlogo" width="112.23px" height="132.77px"/>
                     </div>
                 </div>
-            </div>
+              </div>
             <div className="about__contents__left__img" data-aos="fade-zoom-in" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="0">
               <div className="about__contents__left__img__flip">
                   <div className="front">
@@ -79,15 +79,20 @@ export const AboutSection = () => {
               <div className="about__contents__right__text">
                 <h6 data-aos="fade-zoom-in" data-aos-delay="400" data-aos-duration="1000" data-aos-offset="0">ABOUT LOTTO CENTRAL</h6>
                 <h2 data-aos="fade-zoom-in" data-aos-delay="600" data-aos-duration="1000" data-aos-offset="0">Lotto Central is India’s ticket to the <br/> <span className="pink">Australia's largest </span><span className="yellow">official lotteries.</span></h2>
-                <p data-aos="fade-zoom-in" data-aos-delay="800" data-aos-duration="1000" data-aos-offset="0">We are committed to continuously improving our responsible gaming measures. Feedback from users is valued, and we actively seek ways to enhance our platform's safety and responsible gaming features. <br /><br />
-                  <span className="d-xl-block d-md-none d-block">At Lotto Central, we've crafted a seamless and secure platform exclusively for our Indian users, ensuring you can easily purchase tickets for Australia's most exciting lotteries. Our mission is simple – to make the allure of life-changing jackpots accessible to you with just a few clicks.</span>
+                <p data-aos="fade-zoom-in" data-aos-delay="800" data-aos-duration="1000" data-aos-offset="0">At lotto central, we pride ourselves on providing a seamless and convenient platform for Indian players to experience the excitement of Australia's biggest lotteries.<br /><br />
+                  Our mission is simple: to bring the thrill of Australian jackpots directly to you, regardless of your location in India. We understand the dreams and aspirations of players seeking life-changing wins, and we're dedicated to making those dreams a reality. <br /><span className="d-xl-block d-md-none d-block"> <br />With just a few clicks, you can access a wide range of Australia's best lotteries, including popular games like Powerball, Oz Lotto, Saturday Lotto, Set for Life, and many more.</span>
                 </p>
               </div>
           </div>
         </div>
         <p className="py-4" data-aos="fade-zoom-in" data-aos-delay="1000" data-aos-duration="1000" data-aos-offset="0"> 
-          <span className="d-md-block d-xl-none d-none">At Lotto Central, we've crafted a seamless and secure platform exclusively for our Indian users, ensuring you can easily purchase tickets for Australia's most exciting lotteries. Our mission is simple – to make the allure of life-changing jackpots accessible to you with just a few clicks. <br/> <br/></span>
-          Trust Lotto Central to be your reliable gateway to the excitement, transparency, and global possibilities of Australian lotteries. Join us on this exhilarating journey, where every ticket holds the potential to transform dreams into reality.</p>
+          <span className="d-md-block d-xl-none d-none">With just a few clicks, you can access a wide range of Australia's best lotteries, including popular games like Powerball, Oz Lotto, Saturday Lotto, Set for Life, and many more. <br/> <br/></span>
+          
+          
+          Our user-friendly interface ensures a hassle-free experience, allowing you to easily select your favourite games, purchase tickets, and track your winnings—all from the comfort of your home or on the go.
+          <br /><br />We prioritize the security of your transactions and personal information. Our platform employs state-of-the-art encryption technology and adheres to strict security protocols to safeguard your data and ensure a safe gaming environment.
+          <br /><br />Join today and your next big win could be just a click away!
+        </p>
     </div>
   </section>
   )

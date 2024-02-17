@@ -172,8 +172,8 @@ main::before {
 
 @media (min-width: 1300px) and (max-width: 1531.98px) {
   .container {
-    padding-left: 8rem !important;
-    padding-right: 8rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
   }
 }
 
@@ -821,9 +821,9 @@ main::before {
 
 .gallery__content__slider .gallerySlider__single__content h4 {
   padding-top: 0.5rem;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.75rem;
 }
 
@@ -841,7 +841,7 @@ main::before {
 
 .gallery__content__slider .gallerySlider__single__content h5 {
   font-family: "Barlow", sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.75rem;
 }
@@ -940,24 +940,14 @@ main::before {
   margin-top: 2rem;
 }
 
-.gallery .green {
+.gallery .yellow {
   background: linear-gradient(17deg, rgba(11, 115, 56, 0.75) 14.33%, rgba(168, 255, 121, 0.85) 80.95%);
 }
 
-.gallery .green .right {
+.gallery .yellow .right {
   background: -webkit-gradient(linear, left top, left bottom, from(#FEE600), to(#F39900));
   background: linear-gradient(180deg, #FEE600 0%, #F39900 100%);
   color: #00802A;
-}
-
-.gallery .blue {
-  background: linear-gradient(6deg, rgba(0, 87, 153, 0.75) 20.13%, rgba(68, 175, 255, 0.85) 91.36%);
-}
-
-.gallery .blue .right {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F13E39), to(#870000));
-  background: linear-gradient(180deg, #F13E39 0%, #870000 100%);
-  color: #FFFFFF;
 }
 
 .gallery .pink {
@@ -1656,7 +1646,7 @@ main::before {
 
 .faq__accordions ul .open .accordions__text {
   padding-bottom: 2rem;
-  max-height: 5.5rem;
+  max-height: 7rem;
 }
 
 @media (max-width: 991.98px) {
@@ -2303,6 +2293,7 @@ main::before {
 .center {
   position: relative;
   width: 31.25rem;
+  border-radius: 0 !important;
 }
 
 .error {
@@ -2324,6 +2315,7 @@ main::before {
   width: 100%;
   position: relative;
   font-family: "Comfortaa", sans-serif;
+  border-radius: 0 !important;
 }
 
 input.email {
@@ -2339,6 +2331,7 @@ input.email {
   border-bottom: 1px solid rgba(242, 187, 90, 0.9);
   padding: 1.25rem 0 0 0;
   background: rgba(0, 0, 0, 0);
+  border-radius: 0 !important;
 }
 
 .inner-text {
@@ -2353,6 +2346,7 @@ input.email {
   pointer-events: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  border-radius: 0 !important;
 }
 
 input.email:focus ~ .inner-text,
@@ -2360,11 +2354,11 @@ input.email:valid ~ .inner-text {
   -webkit-transform: translateY(-1.25rem);
           transform: translateY(-1.25rem);
   font-size: 0.85rem;
+  border-radius: 0 !important;
 }
 
 .button {
   position: absolute;
-  top: 0;
   right: 0;
   z-index: 2;
   font-size: 1.125rem;
@@ -2388,6 +2382,12 @@ input.email:valid ~ .inner-text {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 575.98px) {
+  .button {
+    top: 0.75rem;
+  }
 }
 
 .button img {
@@ -2418,6 +2418,7 @@ input.email:valid ~ .button:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 0 !important;
 }
 
 input.email:invalid ~ .button:before {
@@ -2431,11 +2432,13 @@ input.email:invalid ~ .button:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 0 !important;
 }
 
 input.email:valid ~ .button:before {
   color: #d5e9f6 !important;
   background: #0E0C31;
+  border-radius: 0 !important;
 }
 
 #check {

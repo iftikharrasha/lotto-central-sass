@@ -192,7 +192,7 @@ export const Lotteries = () => {
                     LotteriesData.slice(0, displayCount).map((item, index) => (
                       <li
                         key={index}
-                        className="swiper-slide gallerySlider__single green"
+                        className="swiper-slide gallerySlider__single yellow"
                         style={{
                           background: item.color && item.color!=="undefined" ?` linear-gradient(0deg, ${hexToRgba(
                             item.color,

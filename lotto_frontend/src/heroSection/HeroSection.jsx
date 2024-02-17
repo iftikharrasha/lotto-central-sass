@@ -28,7 +28,7 @@ export const HeroSection = () => {
       <div className="hero__content">
         <div className="hero__content__left">
           <h1 data-aos="fade" data-aos-delay="500" data-aos-duration="1000" data-aos-offset="0" data-aos-once="true">Play <span className="yellow">Australian</span> <br/> <span className="yellow">Jackpots</span> from <span className="pink">India</span></h1>
-          <p data-aos="fade" data-aos-delay="700" data-aos-duration="1000" data-aos-offset="0" data-aos-once="true">Lotto centrals  makes daily live easier and that in a safe way, by eliminating the till in all situations, on- and offline. Lotto central contextual services enable seamless customer journeys, including frictionless payments.</p>
+          <p data-aos="fade" data-aos-delay="700" data-aos-duration="1000" data-aos-offset="0" data-aos-once="true">Play big and win bigger with lotto central. Choose from popular games like Powerball, Oz Lotto, Saturday Lotto, Set for Life, and more. Sign up and start your winning journey today!</p>
           <a href="#signup" data-aos="flip-up" className="navBtn">
             <button onClick={onOpenModal} className="main__btn" data-aos="fade" data-aos-delay="900" data-aos-duration="1000" data-aos-offset="0" data-aos-once="true">SIGN UP</button>
           </a>

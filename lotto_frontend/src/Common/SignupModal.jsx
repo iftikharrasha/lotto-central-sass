@@ -45,7 +45,7 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                 setEmailSent(true);
                 setMessagePop({
                     title: 'Welcome aboard, lucky one!',
-                    desc1: `Keep an eye on your email for launch undates.`,
+                    desc1: `Keep an eye on your email for launch updates.`,
                     desc2: null,
                 })
             }
@@ -57,7 +57,7 @@ const SignupModal = ({open, onCloseModal, setIsLoading}) => {
                 setMessagePop({
                     title: 'Oops!',
                     desc1: `It seems you're already on our list.`,
-                    desc2: `Keep an eye on your email for launch undates.`,
+                    desc2: `Keep an eye on your email for launch updates.`,
                 })
             }
             console.error("An error occurred:", error.response);
