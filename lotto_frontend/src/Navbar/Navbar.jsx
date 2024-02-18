@@ -292,7 +292,7 @@ export const Navbar = () => {
                       data-aos-duration="1000"
                       data-aos-offset="0"
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.facebook.com/lottocentral.in" target="_blank" rel="noopener noreferrer">
                         <img
                           src={facebookImg}
                           alt="facebook"
@@ -308,7 +308,7 @@ export const Navbar = () => {
                       data-aos-duration="1000"
                       data-aos-offset="0"
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.tiktok.com/@lottocentral" target="_blank" rel="noopener noreferrer">
                         <img
                           src={tiktokImg}
                           alt="tiktok"
@@ -324,7 +324,7 @@ export const Navbar = () => {
                       data-aos-duration="1000"
                       data-aos-offset="0"
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.instagram.com/lottocentral" target="_blank" rel="noopener noreferrer">
                         <img
                           src={instaImg}
                           alt="instagram"

@@ -984,7 +984,6 @@ main{
                     .accordions__title {
                         color: $yellow;
                         @include fontMaker($font1, 1.25rem, 700, 2rem);
-                        text-transform: capitalize;
                         flex: 1 1 auto;
                         display: flex;
                         padding-right: 1.25rem;
@@ -1072,7 +1071,7 @@ main{
             }
             .open .accordions__text {
                 padding-bottom: 2rem;
-                max-height: 7rem;
+                max-height: 30rem;
                 @media (max-width: 991.98px) {
                     padding-bottom: 1.25rem;
                 }
