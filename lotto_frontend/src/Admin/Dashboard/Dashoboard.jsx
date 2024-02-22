@@ -282,7 +282,7 @@ export const Dashoboard = () => {
           </div>
         </div>
       </section>
-      <div className="dashboard-container" style={{ marginTop: "-10rem" }}>
+      <div className="dashboard-container" style={{ marginTop: "-6rem" }}>
         <div className="dashboard-header">
           <h2>DASHBOARD</h2>
           <button
