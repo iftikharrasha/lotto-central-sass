@@ -1677,3 +1677,12 @@ main{
     .py-4 {
         padding: 1.5rem 0!important;
     }
+
+    .formPopup{
+        position: relative;
+        z-index: 1;
+        text-align: left;
+        .inputStyle{
+            margin-top: 10px;
+        }
+    }

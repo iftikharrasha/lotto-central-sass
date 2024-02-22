@@ -408,11 +408,11 @@ export const Dashoboard = () => {
       {open && (
         <Modal isOpen={open} onRequestClose={onCloseModal} style={customStyles}>
           <div style={{ padding: "1rem" }}>
-            <h2 style={{ color: "black" }}>
+            <h2>
               {editId && editId ? "Update" : "Add"} Lottery
             </h2>
             <div style={{ maxHeight: "30rem", overflowY: "auto" }}>
-              <form encType="multipart/form-data">
+              <form encType="multipart/form-data" className="formPopup">
                 <div
                   className="fields"
                   style={{
@@ -421,7 +421,7 @@ export const Dashoboard = () => {
                     gap: "1rem",
                   }}
                 >
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Lottery Name
                   </label>
                   <input
@@ -433,7 +433,7 @@ export const Dashoboard = () => {
                     onChange={handlechange}
                     required
                   />
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Lottery Image
                   </label>
                   <input
@@ -450,7 +450,7 @@ export const Dashoboard = () => {
                       ? "Image already Exists"
                       : ""}
                   </span>
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Lottery Price
                   </label>
                   <input
@@ -473,12 +473,12 @@ export const Dashoboard = () => {
                     }}
                     required
                   />
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Lottery Type
                   </label>
                   <div
                     style={{
-                      color: "black",
+                      color: "white",
                       display: "flex",
                       justifyContent: "space-between",
                       width: "50%",
@@ -512,7 +512,7 @@ export const Dashoboard = () => {
                         </label>
                       ))}
                   </div>
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Lottery color
                   </label>
                   <input
@@ -525,7 +525,7 @@ export const Dashoboard = () => {
                     onChange={handlechange}
                     required
                   />{" "}
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Start Date
                   </label>
                   <input
@@ -543,7 +543,7 @@ export const Dashoboard = () => {
                     onChange={handlechange}
                     required
                   />{" "}
-                  <label style={{ color: "black", fontWeight: "bold" }}>
+                  <label style={{ color: "white", fontWeight: "bold" }}>
                     Expiry Date
                   </label>
                   <input
