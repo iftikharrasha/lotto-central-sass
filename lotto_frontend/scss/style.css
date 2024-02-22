@@ -644,6 +644,12 @@ main::before {
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .dashboard {
+    padding: 10rem 0 4rem 0;
+  }
+}
+
 .gallery {
   padding: 10rem 0 3rem 0;
   position: relative;

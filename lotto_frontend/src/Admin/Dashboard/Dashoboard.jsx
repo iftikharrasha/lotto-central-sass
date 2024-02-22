@@ -241,7 +241,7 @@ export const Dashoboard = () => {
         </div>
       )}
       <Navbar />
-      <section className="hero" id="home" style={{ visibility: "hidden" }}>
+      <section className="hero dashboard" id="home" style={{ visibility: "hidden" }}>
         <div className="container">
           <div className="hero__content">
             <div className="hero__content__left">
@@ -333,7 +333,7 @@ export const Dashoboard = () => {
                       key={item.id}
                       className={index % 2 === 0 ? "green-row" : "white-row"}
                     >
-                      <td>{item.name ? item.name : "N/A"}</td>
+                      <td className="time">{item.name ? item.name : "N/A"}</td>
                       <td>{item.priceType ? item.priceType : "N/A"}</td>
                       <td>{item.price ? item.price : "N/A"}</td>
                       <td>
@@ -350,7 +350,7 @@ export const Dashoboard = () => {
                           "N/A"
                         )}
                       </td>
-                      <td>{item.expiryTime ?  moment.utc(item.expiryTime).format("YYYY-MM-DD hh:mm A") : "N/A"}</td>
+                      <td className="time">{item.expiryTime ?  moment.utc(item.expiryTime).format("YYYY-MM-DD hh:mm A") : "N/A"}</td>
                       <td>
                         <button
                           onClick={() => {

@@ -437,6 +437,12 @@ main{
     }
 }
 
+.dashboard{
+    @media (max-width: 576px) {
+        padding: 10rem 0 4rem 0;
+    }
+}
+
 .gallery {
     padding: 10rem 0 3rem 0;
     position: relative; 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import contactImg from "../../assets/img/contact.png";
+import adminImg from "../../assets/img/admin.png";
 import toast, { Toaster } from 'react-hot-toast';
 
 export const Login = () => {
@@ -78,7 +78,7 @@ export const Login = () => {
                   data-aos-duration="1000"
                   data-aos-offset="0"
                 >
-                  Enter Credentials
+                  ADMIN PANEL
                 </h6>
 
                 <form>
@@ -126,7 +126,7 @@ export const Login = () => {
               <div className="contact__contents__right">
                 <img
                   className="thumb"
-                  src={contactImg}
+                  src={adminImg}
                   alt="contact"
                   width="591px"
                   height="372px"

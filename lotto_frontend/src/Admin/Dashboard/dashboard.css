@@ -24,12 +24,17 @@
   color: white;
   font-weight: 600;
 }
+
+.dashboard-navbar-table-container .time {
+  min-width: 200px;
+}
 /*  */
 /*  */
 /*  */
 .dashboard-navbar-table-container {
   display: flex;
   flex-wrap: wrap;
+  overflow-x: scroll;
 }
 .dashboard-navbar-container {
   /* height: 88vh; */
