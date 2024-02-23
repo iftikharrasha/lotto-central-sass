@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import adminImg from "../../assets/img/admin.png";
+import headerImg from "../../assets/img/lotto-central.png";
 import toast, { Toaster } from 'react-hot-toast';
 
 export const Login = () => {
@@ -70,6 +71,17 @@ export const Login = () => {
       <section className="contact">
         <div className="container">
           <div className="contact__contents">
+            <div className="brandLogin">
+            <a href="/" data-aos="flip-up">
+              <img
+                className="logo"
+                src={headerImg}
+                alt="logo"
+                width="160px"
+                height="75px"
+              />
+              </a>
+            </div>
             <div className="contact__contents__below">
               <div className="contact__contents__left">
                 <h6

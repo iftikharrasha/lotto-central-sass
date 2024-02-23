@@ -217,3 +217,13 @@ table {
 .white-row {
   background: linear-gradient(40deg, rgba(161, 198, 221, 0.5), rgba(161, 198, 221, 0.225));
 }
+
+.brandLogin{
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.brandLogin .logo{
+  width: 12rem; 
+  height: auto;
+}
