@@ -65,23 +65,13 @@ export const Lotteries = () => {
   ];
   const allColor = [
     {
-      color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
       background:"linear-gradient(315deg, #27A5E4 5.75%, #2B1357 94.25%)",
-      color1:"",
-    },
-    {
-      color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
-      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
     {
-      color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
+      color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
       background:"linear-gradient(315deg, #68D030 5.75%, #0B7338 94.25%)",
-      color1:"white",
-    },
-    {
-      color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
-      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
       color1:"",
     },
     {
@@ -90,22 +80,32 @@ export const Lotteries = () => {
       color1:"white",
     },
     {
-      color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
-      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
+      color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
+      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
       color1:"white",
     },
     {
       color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
+      color1:"",
+    },
+    {
+      color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
       background:"linear-gradient(315deg, #00C7E5 5.75%, #01AAC4 94.25%)",
+      color1:"white",
+    },
+    {
+      color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
+      background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
+      color1:"white",
+    },
+    {
+      color: "linear-gradient(180deg, #FEE600 0%, #F39900 100%)",
+      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
       color1:"",
     },
     {
       color: "linear-gradient(180deg, #F13E39 0%, #870000 100%)",
-      background:"linear-gradient(315deg, #CD108A 5.75%, #B30074 94.25%)",
-      color1:"white",
-    },
-    {
-      color: "linear-gradient(180deg, #F4CB00 0%, #E37A3C 43.29%, #CD108A 100%)",
       background:"linear-gradient(315deg, #0081E1 5.75%, #005799 94.25%)",
       color1:"white",
     },
