@@ -71,7 +71,7 @@ async function createInquiryUser(req, res, next) {
           <meta name="format-detection" content="telephone=no">
           <meta name="x-apple-disable-message-reformatting">
           <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
-          <title>Welcome to lotto central: Play Big, Win Bigger!</title>
+          <title>Welcome to Lotto Central: Play Big, Win Bigger!</title>
           <style type="text/css" media="screen">
             /* Linked Styles */
             body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f6f6f5; -webkit-text-size-adjust:none }
@@ -162,14 +162,14 @@ async function createInquiryUser(req, res, next) {
                                   <tr>
                                     <td style="color:#fbd852; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:36px; font-weight:700; line-height:140%; text-align:center;">
                                       <div mc:edit="text_35">Get ready to play big and <br>
-                                        win bigger with <span style="color: #f631ba">lotto central</span>
+                                         win bigger with <span style="color: #f631ba">Lotto Central!</span>
                                       </div>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:28px; font-weight:400; line-height:150%; text-align:center; padding: 15px 0;">
-                                      <div mc:edit="text_35">We're thrilled to have you on board <br>
-                                        as we gear up for our exciting launch.</div>
+                                      <div mc:edit="text_35">We're thrilled to have you onboard <br>
+                                         as we gear up for our exciting launch.</div>
                                     </td>
                                   </tr>
                                   <tr>
@@ -186,7 +186,7 @@ async function createInquiryUser(req, res, next) {
                                   <tr>
                                     <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:24px; font-weight:400; line-height:160%; text-align:center; padding-top: 15px;">
                                       <div mc:edit="text_35">
-                                        <span style="color: #f631ba;">Keep Your Eyes Open</span><br>
+                                        <span style="color: #f631ba;font-weight:700;">Keep your eyes open</span><br>
                                       </div>
                                     </td>
                                   </tr>
@@ -229,7 +229,7 @@ async function createInquiryUser(req, res, next) {
                                       <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:bold;line-height:150%; text-align:center;">
                                         <table border="0" cellspacing="0" cellpadding="0">
                                           <tr>
-                                            <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
+                                            <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
                                               <div mc:edit="text_35">Chase monumental jackpots and unforgettable prizes with Powerball, Australia's favorite lottery game.</div>
                                             </td>
                                           </tr>
@@ -252,7 +252,7 @@ async function createInquiryUser(req, res, next) {
                                       <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:bold;line-height:150%; text-align:center;">
                                         <table border="0" cellspacing="0" cellpadding="0">
                                           <tr>
-                                            <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
+                                            <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
                                               <div mc:edit="text_35">Experience the excitement of Oz Lotto, where generous rewards and multiple divisions await lucky players like you.</div>
                                             </td>
                                           </tr>
@@ -275,8 +275,8 @@ async function createInquiryUser(req, res, next) {
                                       <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:bold;line-height:150%; text-align:center;">
                                         <table border="0" cellspacing="0" cellpadding="0">
                                           <tr>
-                                            <td style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
-                                              <div mc:edit="text_35">Set for Life offers you this incredible chance for financial security and freedom</div>
+                                            <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:18px;font-weight:400;line-height:150%; text-align:center;">
+                                              <div mc:edit="text_35">Set for Life offers you this incredible chance for financial security and freedom.</div>
                                             </td>
                                           </tr>
                                         </table>
@@ -296,7 +296,7 @@ async function createInquiryUser(req, res, next) {
                             <tbody>
                               <tr>
                                 <td class="headerContent" style="border-collapse:collapse;color:#202020;font-family:arial;font-size:34px;font-weight:bold;line-height:100%;padding:0;text-align:center;vertical-align:middle;">
-                                  <img src="https://res.cloudinary.com/duoalyur6/image/upload/v1708197630/sparkle_hhqpvi.png" width="500" height="350" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
+                                  <img src="https://i.postimg.cc/8PqbcG4z/Untitled-design-13.png" width="400" height="250" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext/>
                                 </td>
                               </tr>
                             </tbody>
@@ -322,7 +322,7 @@ async function createInquiryUser(req, res, next) {
                                       </tr>
                                       <tr>
                                         <td style="color:#ffffff; font-family: 'Comfortaa', Arial, Helvetica, sans-serif; font-size:18px; font-weight:400; line-height:140%; text-align:center; padding-bottom: 10px;">
-                                          <div mc:edit="text_35">At lotto central, we believe in making your experience even more exhilarating with exciting giveaways and promotions, adding extra excitement to your lottery journey.</div>
+                                          <div mc:edit="text_35">At Lotto Central, we believe in making your experience even more exhilarating with exciting giveaways and promotions, adding extra excitement to your lottery journey.</div>
                                         </td>
                                       </tr>
                                       <tr>
@@ -476,12 +476,12 @@ async function createInquiryUser(req, res, next) {
                                                                 <td class="img" style="color:#ffffff; font-family: 'Montserrat', Arial, Helvetica, sans-serif; font-size:15px; font-weight:400; line-height:200%; text-align:center;">
                                                                   <div mc:edit="text_35">
                                                                     Need help? Contact us on
-                                                                    <a href="mailto:hello@lottocentral.in" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff; text-decoration: underline;">
+                                                                    <a href="mailto:hello@lottocentral.in" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#fbd852; text-decoration: underline;">
                                                                       hello@lottocentral.in 
                                                                     </a>
                                                                     <br>
                                                                     or visit
-                                                                    <a href="https://lottocentral.in/" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff; text-decoration: underline;">
+                                                                    <a href="https://lottocentral.in/" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#fbd852; text-decoration: underline;">
                                                                       www.lottocentral.in
                                                                     </a>
                                                                   </div>
