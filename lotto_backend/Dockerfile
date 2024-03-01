@@ -1,8 +1,10 @@
-FROM node:16.17.0-alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
 COPY ./package.json .
+
+RUN apk --no-cache add curl
 
 EXPOSE 3000
 
